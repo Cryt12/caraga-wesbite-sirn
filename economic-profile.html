@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economic Profile — DOST Caraga Performance Review</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/DOST Logo.png" type="image/png">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><img src="images/DOST Logo.png" alt="DOST Caraga Logo" class="nav-brand-logo"><div><div class="nav-brand-text">DOST Caraga Region XIII</div><div class="nav-brand-sub">Performance Review · FY 2024–2025</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="economic-profile.html" class="active">Economic Profile</a></li>
+      <li><a href="sti-portfolio.html">STI Portfolio</a></li>
+      <li class="nav-dropdown"><a href="#">Frameworks</a>
+        <div class="nav-dropdown-menu">
+          <a href="framework-fourpillar.html">Four Pillar Outcomes</a><a href="framework-horizon.html">3-Horizon Strategic Framework</a>
+          <a href="framework-pbbm.html">PBBM 8-Point Agenda</a><a href="framework-sdg.html">SDG Alignment</a>
+          <a href="framework-fame.html">FAME Sectors</a><a href="framework-strategies.html">DOST Strategies</a>
+        </div>
+      </li>
+      <li><a href="data-explorer.html">Data Explorer</a></li><li><a href="provinces.html">Provinces</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Macroeconomic Context</div>
+    <h1>Caraga Economic Profile</h1>
+    <p>A comprehensive analysis of the macroeconomic performance, sectoral dynamics, poverty trajectory, labor market conditions, and inflationary trends of Caraga Region for the period 2024–2025.</p>
+    <div class="hero-meta">
+      <span class="hero-badge">GRDP Growth 2025: <strong>5.704%</strong></span>
+      <span class="hero-badge">National Rank: <strong>2nd Fastest</strong></span>
+      <span class="hero-badge">Family Poverty 2023: <strong>14.9%</strong></span>
+      <span class="hero-badge">GDP (Nominal): <strong>USD 7.7 Billion</strong></span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Economic Profile</span></div>
+
+  <!-- SECTION 1: MACRO PERFORMANCE -->
+  <div class="section-block">
+    <div class="section-label">Macroeconomic Performance</div>
+    <h2 class="section-title">Aggregate Economic Growth Profile (2024–2025)</h2>
+    <p class="section-intro">Caraga Region has emerged as one of the Philippines' most dynamic regional economies, registering above-national-average growth for two consecutive years and achieving landmark improvements in poverty reduction and household welfare.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card navy"><div class="stat-value">5.7%</div><div class="stat-label">GRDP Growth Rate (2025)</div><div class="stat-trend up">↑ vs. 4.40% National Average</div></div>
+      <div class="stat-card gold"><div class="stat-value">6.9%</div><div class="stat-label">GRDP Growth Rate (2024)</div><div class="stat-trend up">↑ 2nd Fastest in Philippines</div></div>
+      <div class="stat-card teal"><div class="stat-value">₱129,925</div><div class="stat-label">Per Capita GRDP (2025)</div><div class="stat-trend up">↑ from ₱124,236 in 2024</div></div>
+      <div class="stat-card green"><div class="stat-value">14.9%</div><div class="stat-label">Family Poverty Incidence (2023)</div><div class="stat-trend up">↓ Most improved in Philippines</div></div>
+      <div class="stat-card blue"><div class="stat-value">2,865,196</div><div class="stat-label">Total Population (2024 Census)</div><div class="stat-note">Up from 2.6M in 2015</div></div>
+      <div class="stat-card red"><div class="stat-value">USD 7.7B</div><div class="stat-label">Nominal Regional GDP</div><div class="stat-note">Nominal per capita: USD 2,630</div></div>
+    </div>
+
+    <div class="analysis-block">
+      <h4>Regional Competitiveness in National Context</h4>
+      <p>In 2025, Caraga Region achieved a real economic expansion of <strong>5.704 percent</strong>, following an even more robust growth rate of <strong>6.9 percent in 2024</strong>. These figures positioned Caraga as the second-fastest-growing regional economy in the Philippines for two consecutive years, trailing only Western Visayas at 6.38 percent and ahead of the Negros Island Region at 5.699 percent. This performance significantly exceeded the national GDP growth rate of 4.40 percent, demonstrating Caraga's sustained regional catching-up process.</p>
+      <p>Among Mindanao regions, Caraga outperformed Davao Region at 5.15 percent, the Bangsamoro Autonomous Region in Muslim Mindanao at 5.0 percent, Northern Mindanao at 4.9 percent, and Soccsksargen at 4.8 percent. Historically, Caraga's per capita GRDP stood at only PHP 36,651 in 2018, compared to the National Capital Region's PHP 253,893 — a stark gap that has since narrowed considerably with per capita GRDP reaching PHP 129,925 by 2025.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">GRDP Growth Rate vs. National Average</div><div class="panel-subtitle">2023–2025</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartGRDP"></canvas></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Per Capita GRDP Growth</div><div class="panel-subtitle">2018–2025 (PHP)</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartPerCapita"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: SECTORAL -->
+  <div class="section-block">
+    <div class="section-label">Sectoral Performance</div>
+    <h2 class="section-title">Sectoral GVA Performance and Structural Transformation</h2>
+    <p class="section-intro">The 2025 supply-side performance reveals a structural shift toward a service-oriented economy, supported by industrial expansion, while the primary agricultural sector continues to face structural bottlenecks despite commodity-level gains.</p>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">GVA Share by Sector (2025)</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartGVAShare"></canvas></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Sector Growth Rates (2025)</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartGVAGrowth"></canvas></div></div>
+      </div>
+    </div>
+
+    <div class="analysis-block blue">
+      <h4>Services Sector: The Primary Growth Engine</h4>
+      <p>The services sector served as the primary driver of Caraga's economic expansion in 2025, registering a growth rate of <strong>7.2 percent</strong> and accounting for the largest share of regional GRDP at <strong>57.0 percent</strong>, valued at approximately PHP 218.66 billion. Within the sector, financial and insurance activities led with an expansion of <strong>24.0 percent</strong>, followed by wholesale and retail trade at <strong>20.5 percent</strong>, and transportation and storage at <strong>10.7 percent</strong>. This rapid expansion reflects a buoyant domestic demand environment, accelerated financial integration, and improved transit corridors linking Butuan City to peripheral economies.</p>
+    </div>
+
+    <div class="analysis-block">
+      <h4>Industrial Sector: Uneven but Significant Sub-Sector Growth</h4>
+      <p>The industrial sector expanded by <strong>4.8 percent</strong> in 2025, constituting <strong>32.9 percent</strong> of the GRDP (valued at PHP 126.37 billion). Growth within the industrial sub-sectors was highly uneven. Manufacturing led with an expansion of <strong>39.7 percent</strong>, followed by construction at <strong>29.3 percent</strong> and mining at <strong>22.3 percent</strong>. The sharp divergence between these high sub-sector growth rates and the aggregate 4.8 percent figure highlights a significant structural drag from electricity, gas, water supply, and waste management sub-sectors, which were adversely affected by El Niño conditions and severe weather disturbances during the review period.</p>
+    </div>
+
+    <div class="analysis-block gold">
+      <h4>Agriculture, Forestry, and Fishing: Structural Stagnation Amid Commodity Gains</h4>
+      <p>The primary sector recorded a marginal growth rate of only <strong>0.4 percent</strong> in 2025, representing a <strong>10.1 percent share</strong> of the regional economy (valued at PHP 38.69 billion). Despite this stagnation in aggregate growth, specific sub-sectors performed well: crop production grew by <strong>53.0 percent</strong>, livestock and poultry rose by <strong>21.6 percent</strong>, and agricultural support activities expanded by <strong>11.7 percent</strong>. However, severe contractions in the forestry and fisheries sub-sectors — attributed to localized weather disturbances and marine ecological pressures — offset these gains. This widening gap between the fast-growing Services sector and the near-stagnant Agriculture sector poses a significant risk for rural-urban inequality.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header"><div class="panel-title">Sub-Sector Growth Highlights (2025)</div></div>
+      <div class="panel-body" style="padding:0">
+        <table class="data-table">
+          <thead><tr><th>Sector</th><th>Sub-Sector</th><th>Growth Rate</th><th>Policy Implications</th></tr></thead>
+          <tbody>
+            <tr><td>Services</td><td>Financial & Insurance Activities</td><td><span class="badge badge-green">+24.0%</span></td><td>Signals improving financial access and integration</td></tr>
+            <tr><td>Services</td><td>Wholesale & Retail Trade</td><td><span class="badge badge-green">+20.5%</span></td><td>Buoyant domestic demand; MSME sector growth</td></tr>
+            <tr><td>Services</td><td>Transportation & Storage</td><td><span class="badge badge-green">+10.7%</span></td><td>Infrastructure improvements bearing results</td></tr>
+            <tr><td>Industry</td><td>Manufacturing</td><td><span class="badge badge-green">+39.7%</span></td><td>Key target for DOST technology upgrading programs</td></tr>
+            <tr><td>Industry</td><td>Construction</td><td><span class="badge badge-green">+29.3%</span></td><td>Public infrastructure spending acceleration</td></tr>
+            <tr><td>Industry</td><td>Mining & Quarrying</td><td><span class="badge badge-green">+22.3%</span></td><td>Aligns with FAME Mining sector focus</td></tr>
+            <tr><td>Agriculture</td><td>Crop Production</td><td><span class="badge badge-green">+53.0%</span></td><td>Strong commodity demand; palm oil and rice gains</td></tr>
+            <tr><td>Agriculture</td><td>Livestock & Poultry</td><td><span class="badge badge-green">+21.6%</span></td><td>Native chicken and swine programs performing</td></tr>
+            <tr><td>Agriculture</td><td>Fisheries</td><td><span class="badge badge-red">Negative</span></td><td>Typhoon damage and marine pressures; DOST intervention needed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: POVERTY -->
+  <div class="section-block">
+    <div class="section-label">Poverty and Welfare</div>
+    <h2 class="section-title">Poverty Reduction Trajectory (2009–2023)</h2>
+    <p class="section-intro">The most significant socio-economic achievement of the Caraga Region over the past fifteen years has been its sustained and accelerating reduction in poverty incidence — confirmed to be the most notable improvement among all 18 Philippine regions.</p>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Family Poverty Incidence (2009–2023)</div></div>
+        <div class="panel-body"><div class="chart-wrap-lg"><canvas id="chartPoverty"></canvas></div></div>
+      </div>
+      <div>
+        <div class="analysis-block green">
+          <h4>Historic Achievement in Poverty Reduction</h4>
+          <p>In 2009, Caraga recorded a <strong>population poverty incidence of 54.4 percent</strong> and a <strong>family poverty incidence of 46.0 percent</strong> — among the highest in the country. By 2023, these figures declined dramatically to <strong>20.8 percent</strong> and <strong>14.9 percent</strong>, respectively. This represents a decline of more than 33 percentage points in population poverty over fourteen years, achieving the most notable poverty reduction among all 18 Philippine regions.</p>
+          <p>The updated 2023 official poverty statistics released in August 2024 confirmed family poverty at 14.9 percent, marking an <strong>11.0 percentage point reduction</strong> from the 25.9 percent recorded in 2021 — a remarkable two-year improvement. Caraga's 2023 figures significantly outperformed the medium-term targets set in the Results Matrices, which had aimed for family poverty between 26.0–27.0 percent.</p>
+        </div>
+        <div class="analysis-block red">
+          <h4>Persistent Spatial Disparities</h4>
+          <p>Despite overall progress, significant spatial disparities persist. The Dinagat Islands recorded an increase in family poverty from 30.3 percent (2021) to 30.7 percent (2023), while Agusan del Sur remains the most challenged province with family poverty at 25.9 percent and population poverty at 35.2 percent. These patterns highlight the vulnerability of isolated island economies to climate events (particularly Typhoon Odette) and the limitations of mainland-centric development approaches.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header"><div class="panel-title">Provincial Poverty Comparison (2023 Family Poverty Incidence)</div></div>
+      <div class="panel-body"><div class="chart-wrap"><canvas id="chartProvPoverty"></canvas></div></div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: LABOR -->
+  <div class="section-block">
+    <div class="section-label">Labor Market</div>
+    <h2 class="section-title">Labor Market Performance and Structural Underemployment</h2>
+    <p class="section-intro">Caraga's labor market demonstrated overall resilience during the review period, with the employment rate rising to record levels in 2024, though seasonal and climate-related volatility caused disruptions in mid-2025 that were subsequently reversed by the fourth quarter.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card green"><div class="stat-value">96.1%</div><div class="stat-label">Employment Rate (2024)</div><div class="stat-trend up">↑ from 95.9% in 2023</div></div>
+      <div class="stat-card navy"><div class="stat-value">95.8%</div><div class="stat-label">Employment Rate (Oct 2025)</div><div class="stat-trend neutral">Recovery after mid-year dip</div></div>
+      <div class="stat-card teal"><div class="stat-value">13.9%</div><div class="stat-label">Underemployment (Oct 2025)</div><div class="stat-trend up">↓ Below 21% 2028 target</div></div>
+      <div class="stat-card gold"><div class="stat-value">₱435</div><div class="stat-label">Daily Minimum Wage (2025)</div><div class="stat-note">Adjusted from ₱415 on May 1, 2025</div></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Labor Market Indicators (2023–2025)</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartLabor"></canvas></div></div>
+      </div>
+      <div class="analysis-block" style="align-self:start">
+        <h4>Analytical Assessment of Labor Outcomes</h4>
+        <p>The underemployment rate of <strong>13.9 percent</strong> recorded in October 2025 surpassed the medium-term target of 21.0 percent set in the Results Matrices for 2028 by a significant margin. This reflects the combined effect of the regional wage increase, the expansion of youth employment programs (SPES served 4,043 beneficiaries with PHP 19 million and achieved a 75 percent placement rate), and the recovery of the services and manufacturing sectors.</p>
+        <p>The mid-year spike in unemployment (5.1 percent in July 2025) and underemployment (20.8 percent) is attributable to a series of typhoons and strong earthquakes in Mindanao that disrupted economic activities and temporarily displaced agricultural workers. This climate-related vulnerability underscores the importance of DOST's disaster risk reduction programs and smart agriculture interventions under the CEST and SSCP programs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: INFLATION -->
+  <div class="section-block">
+    <div class="section-label">Price Stability</div>
+    <h2 class="section-title">Inflationary Pressures and Cost-of-Living Dynamics</h2>
+    <p class="section-intro">Price stability in Caraga showed divergent trends between 2024 and late 2025, with low annual averages masking significant acceleration toward the latter part of the review period.</p>
+
+    <div class="analysis-block red">
+      <h4>Inflation Trajectory and Structural Drivers</h4>
+      <p>In 2024, headline inflation slowed to an annual average of <strong>2.7 percent</strong> (down from 5.6 percent in 2023) due to moderating utility and fuel prices. The full-year 2025 average settled at <strong>1.1 percent</strong>, well within the national target range. However, this low annual average obscures a significant acceleration toward year-end: December 2025 inflation rose to 2.6 percent, driven by a rebound in food prices attributed to rising rice prices, and further accelerated to <strong>3.3 percent in January 2026</strong> and <strong>3.6 percent in February 2026</strong>.</p>
+      <p>The primary drivers of 2025–2026 inflation are food and non-alcoholic beverages (rice price acceleration; +2.1% in January 2026) and housing, water, electricity, and fuel costs (+6.6% in January 2026, with electricity at +6.0% and actual rentals at +8.5%). Butuan City recorded the highest urban inflation in the region, reaching <strong>6.3 percent in December 2025</strong>, reflecting concentrated urban demand and rental pressures.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header"><div class="panel-title">Provincial Inflation Rates (January 2026)</div></div>
+      <div class="panel-body">
+        <div class="progress-row"><div class="progress-meta"><span>Butuan City</span><span>4.5%</span></div><div class="progress-bar"><div class="progress-fill" style="width:75%;background:linear-gradient(90deg,#b91c1c,#dc2626)"></div></div></div>
+        <div class="progress-row"><div class="progress-meta"><span>Dinagat Islands</span><span>4.3%</span></div><div class="progress-bar"><div class="progress-fill" style="width:71.7%;background:linear-gradient(90deg,#b91c1c,#f97316)"></div></div></div>
+        <div class="progress-row"><div class="progress-meta"><span>Agusan del Norte</span><span>4.2%</span></div><div class="progress-bar"><div class="progress-fill" style="width:70%;background:linear-gradient(90deg,#b8860b,#f59e0b)"></div></div></div>
+        <div class="progress-row"><div class="progress-meta"><span>Caraga Average</span><span>3.3%</span></div><div class="progress-bar"><div class="progress-fill" style="width:55%;background:linear-gradient(90deg,#b8860b,#d4a017)"></div></div></div>
+        <div class="progress-row"><div class="progress-meta"><span>Surigao del Norte</span><span>3.2%</span></div><div class="progress-bar"><div class="progress-fill" style="width:53.3%;background:linear-gradient(90deg,#1a56b0,#3b82f6)"></div></div></div>
+        <div class="progress-row"><div class="progress-meta"><span>Agusan del Sur</span><span>2.8%</span></div><div class="progress-bar"><div class="progress-fill" style="width:46.7%;background:linear-gradient(90deg,#1a3360,#1a56b0)"></div></div></div>
+        <div class="progress-row"><div class="progress-meta"><span>Surigao del Sur</span><span>1.2%</span></div><div class="progress-bar"><div class="progress-fill" style="width:20%;background:linear-gradient(90deg,#15803d,#16a34a)"></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: INFRASTRUCTURE -->
+  <div class="section-block">
+    <div class="section-label">Public Investment</div>
+    <h2 class="section-title">Public Infrastructure and Investment Programming</h2>
+    <p class="section-intro">Government infrastructure programming has been a critical enabler of Caraga's economic expansion, particularly in reducing logistics costs and improving connectivity among the region's geographically dispersed provinces.</p>
+
+    <div class="grid-2">
+      <div class="analysis-block">
+        <h4>Major Highway Investments (DPWH)</h4>
+        <p>The Department of Public Works and Highways has prioritized four major highway projects for Caraga with an aggregate value of <strong>PHP 81.9 billion</strong>: the Maharlika Highway Rehabilitation (PHP 30.3B), the Butuan-Agusan Logistical Road (PHP 26.2B, 19.94% complete by 2025), the Cabadbaran-Puting Bato-Lanuza Road (PHP 8.8B), and the Agusan Norte-Sur Lateral Road (PHP 16.5B). These investments are designed to reduce logistics costs, improve agricultural transport, and enhance inter-regional trade by connecting Caraga's provincial capitals and key production areas.</p>
+      </div>
+      <div class="analysis-block teal">
+        <h4>FY 2026 Regional Budget and ROLLS It Program</h4>
+        <p>The Caraga RDC endorsed a <strong>PHP 423.74 billion budget proposal for FY 2026</strong>, covering 36 regional line agencies, four SUCs, and the Philippine Science High School Caraga campus. The ROLLS It (Rehabilitation of Local Roads and Lane Sections) program received PHP 701.165 million in 2024 (11.29 lane km) and PHP 566.535 million in 2025 (7.79 lane km), supporting farm-to-market road improvements that directly benefit DOST Caraga's agricultural and agroforestry programs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="region-profile.html" style="color:var(--blue);text-decoration:none;font-size:13px">← Region Profile</a>
+    <a href="sti-portfolio.html" style="color:var(--blue);text-decoration:none;font-size:13px">STI Portfolio →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left"><strong>Department of Science and Technology — Caraga Region (Region XIII)</strong><br>Performance Review Dashboard · Fiscal Years 2024–2025</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li><li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="sti-portfolio.html">STI Portfolio</a></li><li><a href="data-explorer.html">Data Explorer</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+const co = {responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8',font:{size:11}}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8',font:{size:11}}}}};
+
+new Chart(document.getElementById('chartGRDP'),{type:'bar',
+  data:{labels:['2023','2024','2025'],datasets:[
+    {label:'Caraga GRDP Growth',data:[6.5,6.9,5.704],backgroundColor:'#1a3360',borderRadius:4},
+    {label:'National Average',data:[5.5,5.6,4.4],backgroundColor:'#b8860b',borderRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:10,font:{size:11},color:'#475569'}}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8'}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8',callback:v=>v+'%'}}}}});
+
+new Chart(document.getElementById('chartPerCapita'),{type:'line',
+  data:{labels:['2018','2020','2022','2024','2025'],datasets:[
+    {label:'Per Capita GRDP (PHP)',data:[36651,75000,100000,124236,129925],borderColor:'#1a3360',backgroundColor:'rgba(26,51,96,0.1)',fill:true,tension:0.4,pointBackgroundColor:'#1a3360',pointRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8'}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8',callback:v=>'₱'+v.toLocaleString()}}}}});
+
+new Chart(document.getElementById('chartGVAShare'),{type:'doughnut',
+  data:{labels:['Services 57%','Industry 32.9%','Agriculture 10.1%'],
+    datasets:[{data:[57,32.9,10.1],backgroundColor:['#1a3360','#b8860b','#15803d'],borderColor:'#fff',borderWidth:3}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{boxWidth:10,font:{size:11},color:'#475569'}}}}});
+
+new Chart(document.getElementById('chartGVAGrowth'),{type:'bar',
+  data:{labels:['Services','Industry','Agriculture'],datasets:[
+    {data:[7.2,4.8,0.4],backgroundColor:['#1a3360','#b8860b','#15803d'],borderRadius:4}]},
+  options:{...co,scales:{...co.scales,y:{...co.scales.y,ticks:{...co.scales.y.ticks,callback:v=>v+'%'}}}}});
+
+new Chart(document.getElementById('chartPoverty'),{type:'line',
+  data:{labels:['2009','2012','2015','2018','2021','2023'],datasets:[
+    {label:'Family Poverty %',data:[46,40,32,22,25.9,14.9],borderColor:'#1a3360',backgroundColor:'rgba(26,51,96,0.1)',fill:true,tension:0.4,pointBackgroundColor:'#1a3360',pointRadius:4},
+    {label:'Population Poverty %',data:[54.4,48,38,30,null,20.8],borderColor:'#b8860b',backgroundColor:'rgba(184,134,11,0.1)',fill:true,tension:0.4,pointBackgroundColor:'#b8860b',pointRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:10,font:{size:11},color:'#475569'}}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8'}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8',callback:v=>v+'%'}}}}});
+
+new Chart(document.getElementById('chartProvPoverty'),{type:'bar',
+  data:{labels:['Surigao del Norte','Surigao del Sur','Caraga Avg','Butuan City','Agusan del Norte','Agusan del Sur','Dinagat Islands'],
+    datasets:[{data:[6.8,10.3,14.9,12.2,20.8,25.9,30.7],
+      backgroundColor:['#15803d','#15803d','#1a56b0','#15803d','#b8860b','#b91c1c','#b91c1c'],borderRadius:4}]},
+  options:{...co,scales:{...co.scales,x:{...co.scales.x,ticks:{color:'#94a3b8',font:{size:10}}},y:{...co.scales.y,ticks:{...co.scales.y.ticks,callback:v=>v+'%'}}}}});
+
+new Chart(document.getElementById('chartLabor'),{type:'bar',
+  data:{labels:['2023','2024','Jul 2025','Oct 2025'],datasets:[
+    {label:'Employment Rate %',data:[95.9,96.1,94.9,95.8],backgroundColor:'#1a3360',borderRadius:4},
+    {label:'Underemployment Rate %',data:[19.6,15.9,20.8,13.9],backgroundColor:'#b8860b',borderRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:10,font:{size:11},color:'#475569'}}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8'}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8',callback:v=>v+'%'}}}}});
+</script>
+</body>
+</html>

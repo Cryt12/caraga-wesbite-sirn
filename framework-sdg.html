@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SDG Alignment — DOST Caraga Performance Review</title>
+<link rel="icon" href="images/DOST Logo.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><div class="nav-brand-mark">DC</div><div><div class="nav-brand-text">DOST Caraga Region XIII</div><div class="nav-brand-sub">Performance Review · FY 2024–2025</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="economic-profile.html">Economic Profile</a></li><li><a href="sti-portfolio.html">STI Portfolio</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">Frameworks</a>
+        <div class="nav-dropdown-menu">
+          <a href="framework-fourpillar.html">Four Pillar Outcomes</a><a href="framework-horizon.html">3-Horizon Strategic Framework</a>
+          <a href="framework-pbbm.html">PBBM 8-Point Agenda</a>
+          <a href="framework-sdg.html" style="color:var(--blue)!important">SDG Alignment</a>
+          <a href="framework-fame.html">FAME Sectors</a><a href="framework-strategies.html">DOST Strategies</a>
+        </div>
+      </li>
+      <li><a href="data-explorer.html">Data Explorer</a></li><li><a href="provinces.html">Provinces</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Global Goals Alignment</div>
+    <h1>SDG Alignment Analysis</h1>
+    <p>A comprehensive mapping of DOST Caraga's FY 2024–2025 portfolio and 60 RDI Centers against the 17 United Nations Sustainable Development Goals, demonstrating the breadth and depth of the region's contribution to the 2030 Agenda for Sustainable Development.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="sti-portfolio.html">STI Portfolio</a><span>›</span><span>SDG Alignment</span></div>
+
+  <div class="section-block">
+    <div class="section-label">Coverage Overview</div>
+    <h2 class="section-title">SDG Coverage — All 17 Goals Addressed</h2>
+    <p class="section-intro">DOST Caraga's combined portfolio of projects and RDI Centers addresses all 17 United Nations Sustainable Development Goals. This universal coverage reflects the cross-cutting nature of science, technology, and innovation as enablers of sustainable development across economic, social, and environmental dimensions.</p>
+
+    <div class="sdg-grid" id="sdgGrid"></div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Quantitative Analysis</div>
+    <h2 class="section-title">SDG Contribution by Project Count</h2>
+
+    <div class="panel mb-28">
+      <div class="panel-header"><div class="panel-title">Project Alignment per SDG</div><div class="panel-subtitle">Projects may be aligned to multiple SDGs</div></div>
+      <div class="panel-body"><div class="chart-wrap-xl"><canvas id="chartSDG"></canvas></div></div>
+    </div>
+
+    <div class="analysis-block blue">
+      <h4>SDG 9 — Industry, Innovation and Infrastructure: The Anchor Goal</h4>
+      <p><strong>SDG 9 (Industry, Innovation and Infrastructure)</strong> is by a wide margin the most extensively addressed Sustainable Development Goal in DOST Caraga's portfolio, with virtually all 122 projects contributing to this goal. This near-universal alignment is entirely consistent with the nature of DOST Caraga as a science and technology agency whose core mandate — supporting industrial development, technology innovation, and STI infrastructure — maps directly onto SDG 9's three component targets: building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation. The SDG 9 alignment, while comprehensive, also highlights the need to ensure that Caraga's industry and innovation programs are inclusive by design, reaching marginalized communities and small-scale enterprises rather than concentrating benefits among already-competitive firms.</p>
+    </div>
+
+    <div class="analysis-block gold">
+      <h4>SDG 8 — Decent Work and Economic Growth</h4>
+      <p><strong>SDG 8 (Decent Work and Economic Growth)</strong> is the second most-aligned SDG, addressed by approximately <strong>64 projects</strong>. This reflects the employment dimension of the SETUP program — each enterprise modernized under SETUP represents an employment retention or upgrading commitment — as well as the labor market development components of LGIA programs such as IGNITE, TechConnect, and the multiple agricultural business incubators. The portfolio's SDG 8 contribution encompasses both formal employment creation (through enterprise growth) and informal sector workforce improvement (through SETUP's engagement with micro-enterprises that employ informal workers).</p>
+    </div>
+
+    <div class="analysis-block green">
+      <h4>SDG 2 — Zero Hunger and Food Security</h4>
+      <p><strong>SDG 2 (Zero Hunger)</strong> is addressed by approximately <strong>28 projects</strong>, reflecting DOST Caraga's significant programmatic emphasis on food innovation, agricultural technology, and fishery development. The SARAI Plus Project (satellite-based farm advisories), the Food Innovation Centers network, the Caulerpa seaweed farming program, the cassava development initiative in Dinagat, and Project FARM all contribute directly to food security outcomes. DOST Caraga's contribution to SDG 2 is notably differentiated by its technology-mediation approach: rather than direct food provision, the portfolio focuses on productivity-enhancing technologies that reduce production costs, minimize post-harvest losses, and improve nutritional quality of food products.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Environmental SDGs</div>
+    <h2 class="section-title">Environmental SDG Contributions</h2>
+
+    <div class="grid-2">
+      <div class="analysis-block teal">
+        <h4>SDG 13, 14, and 15 — Climate and Ecosystem Goals</h4>
+        <p><strong>SDG 13 (Climate Action)</strong> is addressed by approximately <strong>18 projects</strong>, primarily through CEST and SSCP programs that embed climate-smart agriculture protocols, disaster risk reduction, and renewable energy adoption. <strong>SDG 14 (Life Below Water)</strong> is addressed by seven projects, reflecting the fishery-oriented programs in coastal municipalities of Surigao del Norte and Surigao del Sur. <strong>SDG 15 (Life on Land)</strong> is addressed by twelve projects covering agroforestry, sustainable land management, and ecological rehabilitation for mined-out areas. The Mulberry Demonstration Farm for Mined-Out Lands in Agusan del Norte exemplifies DOST Caraga's commitment to ecosystem recovery.</p>
+      </div>
+
+      <div class="analysis-block purple">
+        <h4>SDG 17 — Partnerships for the Goals</h4>
+        <p><strong>SDG 17 (Partnerships for the Goals)</strong> is addressed by approximately <strong>19 projects</strong>, underscoring the fundamentally partnership-based delivery model of DOST Caraga. Every LGIA and CEST project involves formalized agreements between DOST, LGUs, state universities, and private sector partners. The ASCEND food innovation consortium, the RDC-RRDIC partnership programs, and the i2FAME Center operationalization all explicitly build multi-stakeholder platforms that embody the SDG 17 partnership imperative. This alignment is significant because SDG 17 is a cross-cutting enabler: DOST Caraga's effectiveness as an agency depends fundamentally on the quality and durability of these multi-sector partnerships.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="framework-pbbm.html" style="color:var(--blue);text-decoration:none;font-size:13px">← PBBM 8-Point Agenda</a>
+    <a href="framework-fame.html" style="color:var(--blue);text-decoration:none;font-size:13px">FAME Sectors →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left"><strong>DOST Caraga Region XIII</strong> · Performance Review Dashboard · FY 2024–2025</div>
+    <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="data-explorer.html">Data Explorer</a></li></ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+const sdgCounts = {};
+for(let i=1;i<=17;i++) sdgCounts[`SDG-${String(i).padStart(2,'0')}`]=0;
+PROJECTS.forEach(p=>p.sdg.forEach(s=>{if(sdgCounts[s]!==undefined) sdgCounts[s]++;}));
+
+const grid = document.getElementById('sdgGrid');
+Object.entries(SDG_LABELS).forEach(([code, label], i) => {
+  const num = parseInt(code.split('-')[1]);
+  const color = SDG_COLORS[i];
+  grid.innerHTML += `<div class="sdg-item" style="border-top-color:${color}">
+    <div class="sdg-num" style="color:${color}">${num}</div>
+    <div class="sdg-label">${label}</div>
+    <div class="sdg-count">${sdgCounts[code]||0} projects</div>
+  </div>`;
+});
+
+new Chart(document.getElementById('chartSDG'),{type:'bar',
+  data:{labels:Object.values(SDG_LABELS).map((l,i)=>`SDG ${i+1}`),
+    datasets:[{data:Object.keys(SDG_LABELS).map(k=>sdgCounts[k]||0),
+      backgroundColor:SDG_COLORS,borderRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8',font:{size:10}}},
+            y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8'}}}}});
+</script>
+</body>
+</html>

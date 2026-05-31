@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Horizon Framework — DOST Caraga Performance Review</title><link rel="icon" href="images/DOST Logo.png" type="image/png"><link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><div class="nav-brand-mark">DC</div><div><div class="nav-brand-text">DOST Caraga Region XIII</div><div class="nav-brand-sub">Performance Review · FY 2024–2025</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="economic-profile.html">Economic Profile</a></li><li><a href="sti-portfolio.html">STI Portfolio</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">Frameworks</a>
+        <div class="nav-dropdown-menu">
+          <a href="framework-fourpillar.html">Four Pillar Outcomes</a>
+          <a href="framework-horizon.html" style="color:var(--blue)!important">3-Horizon Strategic Framework</a>
+          <a href="framework-pbbm.html">PBBM 8-Point Agenda</a><a href="framework-sdg.html">SDG Alignment</a>
+          <a href="framework-fame.html">FAME Sectors</a><a href="framework-strategies.html">DOST Strategies</a>
+        </div>
+      </li>
+      <li><a href="data-explorer.html">Data Explorer</a></li><li><a href="provinces.html">Provinces</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Strategic Framework · Horizon Analysis</div>
+    <h1>3-Horizon Strategic Framework</h1>
+    <p>DOST Caraga's project portfolio analyzed through the Three-Horizon lens — from near-term MSME productivity (H1) through technology commercialization (H2) to future industry creation (H3) — with Key Results tracking for all 11 KRs.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="sti-portfolio.html">STI Portfolio</a><span>›</span><span>3-Horizon Framework</span></div>
+
+  <div class="section-block">
+    <div class="section-label">Framework Overview</div>
+    <h2 class="section-title">The Three-Horizon Model and Caraga's Strategic Positioning</h2>
+    <p class="section-intro">The DOST Three-Horizon Strategic Framework structures the Department's interventions across three time-bound and ambition-differentiated levels, each with specific quantitative Key Results that serve as planning targets for the medium-term period.</p>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Projects with Horizon KR Alignment</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartHorizon"></canvas></div></div>
+      </div>
+      <div>
+        <div class="horizon-band h1">
+          <h4>Horizon 1 — MSME Productivity Surge</h4>
+          <ul class="kr-list">
+            <li><span class="kr-num" style="background:#fef3c7;color:#b8860b">H1-KR1</span>10,000 MSMEs modernized in 24 months</li>
+            <li><span class="kr-num" style="background:#fef3c7;color:#b8860b">H1-KR2</span>30% productivity increase per engaged MSME</li>
+            <li><span class="kr-num" style="background:#fef3c7;color:#b8860b">H1-KR3</span>200,000 jobs sustained or upgraded through technology adoption</li>
+          </ul>
+        </div>
+        <div class="horizon-band h2">
+          <h4>Horizon 2 — Technology Commercialization</h4>
+          <ul class="kr-list">
+            <li><span class="kr-num" style="background:#dbeafe;color:#1a56b0">H2-KR1</span>500 science-based ventures established in 24 months</li>
+            <li><span class="kr-num" style="background:#dbeafe;color:#1a56b0">H2-KR2</span>500 technologies ready for global market in 24 months</li>
+            <li><span class="kr-num" style="background:#dbeafe;color:#1a56b0">H2-KR3</span>7 KIST Parks covering distinct sectors established</li>
+            <li><span class="kr-num" style="background:#dbeafe;color:#1a56b0">H2-KR4</span>60,000 new jobs from science-based enterprises and startups</li>
+            <li><span class="kr-num" style="background:#dbeafe;color:#1a56b0">H2-KR5</span>15,000 professionals trained in tech commercialization</li>
+          </ul>
+        </div>
+        <div class="horizon-band h3">
+          <h4>Horizon 3 — Future Industries</h4>
+          <ul class="kr-list">
+            <li><span class="kr-num" style="background:#f3e8ff;color:#7e22ce">H3-KR1</span>₱200 billion in pilot investments secured in 24 months</li>
+            <li><span class="kr-num" style="background:#f3e8ff;color:#7e22ce">H3-KR2</span>100,000 high-skill jobs created in 24 months</li>
+            <li><span class="kr-num" style="background:#f3e8ff;color:#7e22ce">H3-KR3</span>70% job placement rate into future-industry roles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Horizon 1 Analysis</div>
+    <h2 class="section-title">Horizon 1: MSME Productivity Surge</h2>
+
+    <div class="analysis-block gold">
+      <h4>Caraga's Core Delivery Platform for Horizon 1</h4>
+      <p>Horizon 1 is the most extensively addressed strategic horizon in Caraga's portfolio, with <strong>60 projects</strong> aligned to one or more of its three Key Results. All 57 SETUP projects and a subset of LGIA projects (notably the iFWD PH and TechConnect programs) contribute to Horizon 1 objectives. The full SETUP program is aligned to all three H1 Key Results simultaneously: each SETUP-funded enterprise represents a modernized MSME (H1-KR1), a business committed to productivity improvement targets (H1-KR2), and a node of employment sustained or upgraded through technology (H1-KR3).</p>
+      <p>The concentration of H1-aligned projects in Agusan del Norte and Surigao del Norte reflects the higher density of registered MSMEs in these provinces relative to the more rural Agusan del Sur and Dinagat Islands. This geographic pattern warrants attention from a spatial equity standpoint, as the provinces with the greatest development needs — those with the highest poverty incidence — receive relatively fewer direct enterprise-level interventions.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header"><div class="panel-title">H1 Key Results — Project Count Aligned</div></div>
+      <div class="panel-body"><div class="chart-wrap-sm"><canvas id="chartH1"></canvas></div></div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Horizon 2 Analysis</div>
+    <h2 class="section-title">Horizon 2: Technology Commercialization</h2>
+
+    <div class="analysis-block blue">
+      <h4>Building the Commercialization Ecosystem</h4>
+      <p>Horizon 2 targets represent the most complex and systemic objectives in the Three-Horizon Framework, requiring the co-creation of innovation ecosystems, commercialization pathways, and knowledge transfer infrastructure. <strong>38 projects</strong> in DOST Caraga's portfolio contribute to one or more Horizon 2 Key Results, with LGIA projects providing the dominant contribution.</p>
+      <p>The <strong>H2-KR5 objective</strong> — training 15,000 professionals in technology commercialization and innovation management — is the most widely addressed KR in Horizon 2, appearing in 20 projects. Programs such as IGNITE (startup ecosystem transformation), TechConnect (technology transfer facilitation), and the i2FAME Center operationalization collectively build Caraga's capacity to move from technology generation to market-ready products. The Food Innovation Centers in FSUU, NEMSU, and CSU are particularly critical H2 nodes, having received sustained LGIA support across both FY 2024 and FY 2025.</p>
+      <p>The <strong>H2-KR3 objective</strong> — establishing seven KIST Parks covering distinct sectors — has no directly tagged projects in the current portfolio, representing a gap that DOST Caraga may need to address in the next planning cycle through dedicated KIST Park feasibility and establishment programs.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Horizon 3 Analysis</div>
+    <h2 class="section-title">Horizon 3: Future Industries</h2>
+
+    <div class="analysis-block purple">
+      <h4>Caraga's Emerging Future-Industry Footprint</h4>
+      <p>Horizon 3 — the creation of transformative future industries — is represented by <strong>35 projects</strong> in the FY 2024–2025 portfolio. This is a notably substantial representation for what would traditionally be considered the most aspirational and long-range strategic horizon, reflecting DOST Caraga's deliberate ambition to leapfrog toward future-ready economic structures even as it manages near-term MSME productivity gaps.</p>
+      <p>The <strong>SSCP program</strong>, newly introduced in FY 2025, is the primary vehicle for H3 delivery. Its six projects — covering smart community infrastructure, EV charging systems, agro-optimization platforms, and sustainable city roadmaps — directly pursue the H3 objectives of investment attraction (H3-KR1), high-skill job creation (H3-KR2), and future-industry employment placement (H3-KR3). The NOVA Hub (Establishment of the Caraga Network of Open Virtual AI for Startup Ventures) and the ACCESS program (Accelerating the Development of Caraga through Smart and Sustainable Communities) are the flagship H3 initiatives, embodying the region's aspiration to become a hub for artificial intelligence-enabled enterprise creation and digital community governance.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">H3 Projects by Program</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartH3"></canvas></div></div>
+      </div>
+      <div>
+        <div class="findings-box">
+          <h3>Horizon Balance Assessment</h3>
+          <ul class="findings-list">
+            <li><strong>Horizon 1 (60 projects)</strong> is appropriately dominant, reflecting Caraga's primary development priority of MSME modernization and inclusive productivity growth in a region still transitioning from high poverty.</li>
+            <li><strong>Horizon 2 (38 projects)</strong> demonstrates meaningful investment in commercialization infrastructure, though the gap in H2-KR3 (KIST Parks) warrants attention in the FY 2026 planning cycle.</li>
+            <li><strong>Horizon 3 (35 projects)</strong> represents a bold and forward-looking portfolio component that positions Caraga as a future-industry-capable region, with the SSCP and NOVA Hub serving as leading indicators.</li>
+            <li>The <strong>absence of H2-KR3</strong> alignment (KIST Parks) is the most significant gap in KR coverage and requires a dedicated programmatic response to ensure Caraga's STI ecosystem has the institutional anchors needed for sustained commercialization at scale.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="framework-fourpillar.html" style="color:var(--blue);text-decoration:none;font-size:13px">← Four Pillar Outcomes</a>
+    <a href="framework-pbbm.html" style="color:var(--blue);text-decoration:none;font-size:13px">PBBM 8-Point Agenda →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left"><strong>DOST Caraga Region XIII</strong> · Performance Review Dashboard · FY 2024–2025</div>
+    <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="data-explorer.html">Data Explorer</a></li></ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+const krCounts = {};
+Object.keys(KR_LABELS).forEach(k => krCounts[k]=0);
+PROJECTS.forEach(p => p.kr.forEach(k => { if(krCounts[k]!==undefined) krCounts[k]++; }));
+
+const h1c = ['H1-KR1','H1-KR2','H1-KR3'].map(k=>krCounts[k]);
+const h2c = ['H2-KR1','H2-KR2','H2-KR3','H2-KR4','H2-KR5'].map(k=>krCounts[k]);
+const h3c = ['H3-KR1','H3-KR2','H3-KR3'].map(k=>krCounts[k]);
+
+const h1Total = PROJECTS.filter(p=>p.kr.some(k=>k.startsWith('H1'))).length;
+const h2Total = PROJECTS.filter(p=>p.kr.some(k=>k.startsWith('H2'))).length;
+const h3Total = PROJECTS.filter(p=>p.kr.some(k=>k.startsWith('H3'))).length;
+
+new Chart(document.getElementById('chartHorizon'),{type:'doughnut',
+  data:{labels:['Horizon 1 (MSME)','Horizon 2 (Commercialization)','Horizon 3 (Future Industries)','No KR tagged'],
+    datasets:[{data:[h1Total,h2Total,h3Total,PROJECTS.filter(p=>p.kr.length===0).length],
+      backgroundColor:['#b8860b','#1a56b0','#7e22ce','#e2e8f0'],borderColor:'#fff',borderWidth:3}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10},color:'#475569'}}}}});
+
+new Chart(document.getElementById('chartH1'),{type:'bar',
+  data:{labels:['KR1: MSMEs Modernized','KR2: Productivity +30%','KR3: Jobs Sustained'],
+    datasets:[{data:h1c,backgroundColor:'#b8860b',borderRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8',font:{size:10}}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8'}}}}});
+
+const h3Prog = {};
+PROJECTS.filter(p=>p.kr.some(k=>k.startsWith('H3'))).forEach(p=>{h3Prog[p.prog]=(h3Prog[p.prog]||0)+1;});
+new Chart(document.getElementById('chartH3'),{type:'doughnut',
+  data:{labels:Object.keys(h3Prog),datasets:[{data:Object.values(h3Prog),
+    backgroundColor:['#1a3360','#b8860b','#7e22ce','#0f766e'],borderColor:'#fff',borderWidth:2}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{boxWidth:10,font:{size:11},color:'#475569'}}}}});
+</script>
+</body>
+</html>

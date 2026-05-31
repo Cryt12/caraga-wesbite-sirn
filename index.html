@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOST Caraga Region XIII — Performance Review 2024–2025</title>
+<link rel="icon" href="images/DOST Logo.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+.home-hero {
+  background:
+    radial-gradient(circle at top right, rgba(212,160,23,0.16) 0%, transparent 32%),
+    radial-gradient(circle at left center, rgba(37,99,235,0.14) 0%, transparent 28%),
+    linear-gradient(150deg, #07162d 0%, #102444 42%, #1a3360 72%, #0f2142 100%);
+  padding: 88px 24px 76px;
+  position: relative;
+  overflow: hidden;
+}
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 560px; height: 560px;
+  background: radial-gradient(circle, rgba(212,160,23,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.home-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold2), #f5c518, var(--gold2));
+}
+.home-hero-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+.home-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5.2vw, 60px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 820px;
+  margin-bottom: 20px;
+}
+.home-hero h1 span { color: var(--gold2); }
+.home-hero-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.74);
+  max-width: 600px;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+.hero-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 42px;
+}
+.hero-nav-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 18px 16px;
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease, border-color 0.22s ease;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.hero-nav-card:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(212,160,23,0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.16);
+}
+.hero-nav-card .nav-card-icon {
+  font-size: 26px;
+  margin-bottom: 10px;
+  display: block;
+}
+.hero-nav-card .nav-card-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.hero-nav-card .nav-card-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.45;
+}
+.quick-stat-strip {
+  background: linear-gradient(90deg, #0b1e3d 0%, #102346 50%, #0b1e3d 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0 24px;
+}
+.qss-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+.qss-item {
+  flex: 1;
+  padding: 20px 20px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+.qss-item:last-child { border-right: none; }
+.qss-val {
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--gold2);
+  line-height: 1;
+}
+.qss-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+.section-block { margin-bottom: 56px; }
+.page-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.page-link-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid;
+}
+.page-link-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: rgba(26, 86, 176, 0.16);
+}
+.page-link-card .plc-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+.page-link-card .plc-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.page-link-card .plc-desc { font-size: 12px; color: var(--text3); line-height: 1.65; }
+.page-link-card .plc-arrow { font-size: 11px; color: var(--blue); margin-top: 10px; font-weight: 600; }
+@media(max-width:900px){ .page-grid { grid-template-columns: 1fr 1fr; } .qss-inner { flex-wrap: wrap; } .hero-nav-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:560px){ .page-grid { grid-template-columns: 1fr; } .qss-item { flex: 0 0 50%; } }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="images/DOST Logo.png" alt="DOST Caraga Logo" class="nav-brand-logo">
+      <div>
+        <div class="nav-brand-text">DOST Caraga Region XIII</div>
+        <div class="nav-brand-sub">Performance Review · FY 2024–2025</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="economic-profile.html">Economic Profile</a></li>
+      <li><a href="sti-portfolio.html">STI Portfolio</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Frameworks</a>
+        <div class="nav-dropdown-menu">
+          <a href="framework-fourpillar.html">Four Pillar Outcomes</a>
+          <a href="framework-horizon.html">3-Horizon Strategic Framework</a>
+          <a href="framework-pbbm.html">PBBM 8-Point Agenda</a>
+          <a href="framework-sdg.html">SDG Alignment</a>
+          <a href="framework-fame.html">FAME Sectors</a>
+          <a href="framework-strategies.html">DOST Strategies</a>
+        </div>
+      </li>
+      <li><a href="data-explorer.html">Data Explorer</a></li>
+      <li><a href="provinces.html">Provinces</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HOME HERO -->
+<section class="home-hero">
+  <div class="home-hero-inner">
+    <div class="hero-eyebrow">Department of Science and Technology · Caraga Region XIII · FY 2024–2025</div>
+    <h1>Regional Performance<br>Review <span>Dashboard</span></h1>
+    <p class="home-hero-sub">A comprehensive evaluation of the science, technology, and innovation portfolio of DOST Caraga Region for Fiscal Years 2024 and 2025 — presented for the consideration of the Regional Performance Review Panel.</p>
+
+    <div class="hero-nav-grid">
+      <a href="region-profile.html" class="hero-nav-card">
+        <span class="nav-card-icon">🗺️</span>
+        <div class="nav-card-title">Region Profile</div>
+        <div class="nav-card-sub">Geography, demographics, and cultural context of Caraga</div>
+      </a>
+      <a href="economic-profile.html" class="hero-nav-card">
+        <span class="nav-card-icon">📊</span>
+        <div class="nav-card-title">Economic Profile</div>
+        <div class="nav-card-sub">GRDP, poverty, labor market, and sector performance</div>
+      </a>
+      <a href="sti-portfolio.html" class="hero-nav-card">
+        <span class="nav-card-icon">🔬</span>
+        <div class="nav-card-title">STI Portfolio</div>
+        <div class="nav-card-sub">122 projects and 60 RDI centers across all programs</div>
+      </a>
+      <a href="framework-fourpillar.html" class="hero-nav-card">
+        <span class="nav-card-icon">🏛️</span>
+        <div class="nav-card-title">Four Pillar Outcomes</div>
+        <div class="nav-card-sub">Strategic outcome alignment across projects</div>
+      </a>
+      <a href="framework-horizon.html" class="hero-nav-card">
+        <span class="nav-card-icon">🚀</span>
+        <div class="nav-card-title">3-Horizon Framework</div>
+        <div class="nav-card-sub">MSME surge, commercialization, and future industries</div>
+      </a>
+      <a href="framework-pbbm.html" class="hero-nav-card">
+        <span class="nav-card-icon">🇵🇭</span>
+        <div class="nav-card-title">PBBM 8-Point Agenda</div>
+        <div class="nav-card-sub">Alignment with the national socioeconomic agenda</div>
+      </a>
+      <a href="framework-sdg.html" class="hero-nav-card">
+        <span class="nav-card-icon">🌍</span>
+        <div class="nav-card-title">SDG Alignment</div>
+        <div class="nav-card-sub">Coverage across the 17 Sustainable Development Goals</div>
+      </a>
+      <a href="data-explorer.html" class="hero-nav-card">
+        <span class="nav-card-icon">🗃️</span>
+        <div class="nav-card-title">Data Explorer</div>
+        <div class="nav-card-sub">Browse, filter, and search all projects and RDI centers</div>
+      </a>
+      <a href="provinces.html" class="hero-nav-card">
+        <span class="nav-card-icon">📍</span>
+        <div class="nav-card-title">By Province</div>
+        <div class="nav-card-sub">Provincial breakdown of investments and programs</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK STAT STRIP -->
+<div class="quick-stat-strip">
+  <div class="qss-inner">
+    <div class="qss-item"><div class="qss-val">122</div><div class="qss-label">Total Projects</div></div>
+    <div class="qss-item"><div class="qss-val">₱181M+</div><div class="qss-label">Total Investment</div></div>
+    <div class="qss-item"><div class="qss-val">60</div><div class="qss-label">RDI Centers</div></div>
+    <div class="qss-item"><div class="qss-val">5.7%</div><div class="qss-label">GRDP Growth 2025</div></div>
+    <div class="qss-item"><div class="qss-val">14.9%</div><div class="qss-label">Family Poverty 2023</div></div>
+    <div class="qss-item"><div class="qss-val">17</div><div class="qss-label">SDGs Addressed</div></div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content-wrap">
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="section-block">
+    <div class="section-label">Executive Overview</div>
+    <h2 class="section-title">About This Performance Review</h2>
+    <p class="section-intro">This dashboard consolidates the full science, technology, and innovation (STI) portfolio of the Department of Science and Technology, Caraga Region, for the performance review period covering Fiscal Years 2024 and 2025.</p>
+
+    <div class="findings-box">
+      <h3>Key Findings at a Glance</h3>
+      <ul class="findings-list">
+        <li>Caraga Region posted a real GRDP growth of <strong>5.704 percent in 2025</strong> and <strong>6.9 percent in 2024</strong>, ranking as the second-fastest-growing regional economy in the Philippines for two consecutive years and outperforming the national average of 4.40 percent.</li>
+        <li>The regional family poverty incidence declined from <strong>46.0 percent in 2009 to 14.9 percent in 2023</strong>, representing the most notable poverty reduction among all 18 Philippine regions. This achievement significantly surpassed the medium-term target of 26.0–27.0 percent set in the Results Matrices.</li>
+        <li>DOST Caraga implemented <strong>122 projects</strong> under four programs — SETUP, LGIA, CEST, and SSCP — across five provinces and regionwide coverage, representing a combined investment exceeding <strong>₱181 million</strong> over the review period.</li>
+        <li>A total of <strong>60 Research, Development, and Innovation (RDI) Centers</strong> are operational across the region, hosted by state universities and colleges and DOST Caraga itself, collectively addressing all 17 UN Sustainable Development Goals.</li>
+        <li>The <strong>Wealth Creation Fostered (O2-WCF)</strong> outcome dominates the portfolio, reflecting the region's strong focus on MSME modernization, technology commercialization, and agri-industry transformation under the i2FAME framework.</li>
+        <li>All <strong>11 Key Results</strong> under the 3-Horizon Strategic Framework are represented in the project portfolio, with Horizon 3 (Future Industries) gaining significant momentum through the Smart and Sustainable Communities Program in FY 2025.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO OVERVIEW CHARTS -->
+  <div class="section-block">
+    <div class="section-label">Portfolio at a Glance</div>
+    <h2 class="section-title">STI Investment Summary</h2>
+    <p class="section-intro">The following charts provide an overview of the distribution of projects and investments across programs, provinces, and fiscal years.</p>
+
+    <div class="grid-2" style="margin-bottom:20px">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Projects by Program</div><div class="panel-subtitle">FY 2024–2025</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartProgram"></canvas></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Projects by Province</div><div class="panel-subtitle">Including regionwide</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartProvince"></canvas></div></div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Investment by Strategic Outcome</div><div class="panel-subtitle">Four Pillar Framework</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartOutcome"></canvas></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Projects by Fiscal Year</div><div class="panel-subtitle">2024, 2025, and multi-year</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartYear"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE DIRECTORY -->
+  <div class="section-block">
+    <div class="section-label">Website Navigation</div>
+    <h2 class="section-title">All Sections of This Review</h2>
+    <p class="section-intro">Use the links below or the navigation menu above to access any section of this performance review dashboard.</p>
+
+    <div class="page-grid">
+      <a href="region-profile.html" class="page-link-card" style="border-top-color:#0b1e3d">
+        <span class="plc-icon">🗺️</span>
+        <div class="plc-title">Caraga Region Profile</div>
+        <div class="plc-desc">Geographic, demographic, cultural, governance, and institutional context of Caraga Region XIII.</div>
+        <div class="plc-arrow">View Profile →</div>
+      </a>
+      <a href="economic-profile.html" class="page-link-card" style="border-top-color:#b8860b">
+        <span class="plc-icon">📊</span>
+        <div class="plc-title">Economic Profile</div>
+        <div class="plc-desc">GRDP growth, sectoral performance, poverty trajectory, labor market, and infrastructure investments.</div>
+        <div class="plc-arrow">View Economy →</div>
+      </a>
+      <a href="sti-portfolio.html" class="page-link-card" style="border-top-color:#1a56b0">
+        <span class="plc-icon">🔬</span>
+        <div class="plc-title">STI Portfolio Overview</div>
+        <div class="plc-desc">Summary of 122 projects and 60 RDI centers under SETUP, LGIA, CEST, and SSCP programs.</div>
+        <div class="plc-arrow">View Portfolio →</div>
+      </a>
+      <a href="framework-fourpillar.html" class="page-link-card" style="border-top-color:#15803d">
+        <span class="plc-icon">🏛️</span>
+        <div class="plc-title">Four Pillar Outcomes</div>
+        <div class="plc-desc">Analysis of project alignment across the four DOST strategic outcomes: Human Well-being, Wealth Creation, Wealth Protection, and Sustainability.</div>
+        <div class="plc-arrow">View Analysis →</div>
+      </a>
+      <a href="framework-horizon.html" class="page-link-card" style="border-top-color:#1a56b0">
+        <span class="plc-icon">🚀</span>
+        <div class="plc-title">3-Horizon Strategic Framework</div>
+        <div class="plc-desc">Project alignment with Horizon 1 (MSME Productivity), Horizon 2 (Commercialization), and Horizon 3 (Future Industries).</div>
+        <div class="plc-arrow">View Horizons →</div>
+      </a>
+      <a href="framework-pbbm.html" class="page-link-card" style="border-top-color:#7e22ce">
+        <span class="plc-icon">🇵🇭</span>
+        <div class="plc-title">PBBM 8-Point Agenda</div>
+        <div class="plc-desc">How DOST Caraga's portfolio directly supports President Marcos' eight-point socioeconomic development agenda.</div>
+        <div class="plc-arrow">View Alignment →</div>
+      </a>
+      <a href="framework-sdg.html" class="page-link-card" style="border-top-color:#0f766e">
+        <span class="plc-icon">🌍</span>
+        <div class="plc-title">SDG Alignment</div>
+        <div class="plc-desc">Coverage matrix showing how projects and RDI centers address the 17 UN Sustainable Development Goals.</div>
+        <div class="plc-arrow">View SDGs →</div>
+      </a>
+      <a href="framework-fame.html" class="page-link-card" style="border-top-color:#b8860b">
+        <span class="plc-icon">🌾</span>
+        <div class="plc-title">FAME Sector Analysis</div>
+        <div class="plc-desc">Breakdown of the i2FAME framework across Fishery, Agroforestry, Mining, Ecotourism, and Cross-Cutting sectors.</div>
+        <div class="plc-arrow">View Sectors →</div>
+      </a>
+      <a href="framework-strategies.html" class="page-link-card" style="border-top-color:#0f766e">
+        <span class="plc-icon">📋</span>
+        <div class="plc-title">DOST Strategies</div>
+        <div class="plc-desc">Analysis of all 20 DOST Strategic Plan strategies and their representation in the Caraga project portfolio.</div>
+        <div class="plc-arrow">View Strategies →</div>
+      </a>
+      <a href="provinces.html" class="page-link-card" style="border-top-color:#b91c1c">
+        <span class="plc-icon">📍</span>
+        <div class="plc-title">Provincial Profiles</div>
+        <div class="plc-desc">Province-level breakdown: Agusan del Norte, Agusan del Sur, Surigao del Norte, Surigao del Sur, and Dinagat Islands.</div>
+        <div class="plc-arrow">View Provinces →</div>
+      </a>
+      <a href="data-explorer.html" class="page-link-card" style="border-top-color:#1a56b0">
+        <span class="plc-icon">🗃️</span>
+        <div class="plc-title">Data Explorer</div>
+        <div class="plc-desc">Full searchable and filterable access to all 122 projects and 60 RDI centers with complete data fields.</div>
+        <div class="plc-arrow">Explore Data →</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <strong>Department of Science and Technology — Caraga Region (Region XIII)</strong><br>
+      Performance Review Dashboard · Fiscal Years 2024–2025 · Prepared for the Regional Evaluation Panel
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="economic-profile.html">Economy</a></li>
+      <li><a href="sti-portfolio.html">STI Portfolio</a></li>
+      <li><a href="data-explorer.html">Data Explorer</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+const progCounts = countBy(PROJECTS, p => p.prog);
+const provCounts = {};
+PROJECTS.forEach(p => {
+  const pv = p.prov.includes(',') ? 'Multi-Province' : p.prov;
+  provCounts[pv] = (provCounts[pv]||0)+1;
+});
+const outcomeCosts = {};
+PROJECTS.forEach(p => {
+  p.outcomes.forEach(o => { outcomeCosts[o] = (outcomeCosts[o]||0) + p.cost; });
+});
+const yearCounts = {'2024 Only':0,'2025 Only':0,'Multi-Year':0};
+PROJECTS.forEach(p => {
+  if(p.year==='2024') yearCounts['2024 Only']++;
+  else if(p.year==='2025') yearCounts['2025 Only']++;
+  else yearCounts['Multi-Year']++;
+});
+
+function doughnut(id, labels, data, colors) {
+  new Chart(document.getElementById(id), {
+    type:'doughnut',
+    data:{labels, datasets:[{data, backgroundColor:colors, borderColor:'#fff', borderWidth:2}]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'right', labels:{boxWidth:10,font:{size:11},color:'#475569'}}}}
+  });
+}
+function bar(id, labels, data, colors) {
+  new Chart(document.getElementById(id), {
+    type:'bar',
+    data:{labels, datasets:[{data, backgroundColor:colors, borderRadius:4, borderSkipped:false}]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}},
+      scales:{x:{grid:{display:false}, ticks:{color:'#94a3b8',font:{size:10}}},
+              y:{grid:{color:'rgba(226,232,240,0.8)'}, ticks:{color:'#94a3b8',font:{size:10}}}}}
+  });
+}
+
+doughnut('chartProgram',
+  Object.keys(progCounts), Object.values(progCounts),
+  ['#1a3360','#1a56b0','#b8860b','#0f766e']);
+
+const pvK = Object.keys(provCounts);
+bar('chartProvince', pvK.map(k=>k.replace('del Norte','del N.').replace('del Sur','del S.')),
+  pvK.map(k=>provCounts[k]),
+  ['#1a56b0','#1a56b0','#b8860b','#b8860b','#0f766e','#b91c1c','#7e22ce']);
+
+const ocKeys = ['O1-HWBP','O2-WCF','O3-WPR','O4-SI'];
+const ocLabels = ['Human Well-being','Wealth Creation','Wealth Protection','Sustainability'];
+bar('chartOutcome', ocLabels,
+  ocKeys.map(k=>(outcomeCosts[k]||0)/1e6),
+  ['#15803d','#1a56b0','#b8860b','#7e22ce']);
+
+doughnut('chartYear',
+  Object.keys(yearCounts), Object.values(yearCounts),
+  ['#1a56b0','#b8860b','#0f766e']);
+</script>
+</body>
+</html>

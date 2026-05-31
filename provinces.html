@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Provincial Profiles — DOST Caraga Performance Review</title>
+<link rel="icon" href="images/DOST Logo.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+.prov-tab-bar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; }
+.prov-tab { padding:8px 18px; border:1px solid var(--border); background:var(--bg); color:var(--text3); border-radius:6px; cursor:pointer; font-size:12px; font-family:var(--font-body); transition:all 0.15s; font-weight:500; border-top:3px solid transparent; }
+.prov-tab.active { background:var(--white); color:var(--navy); font-weight:700; box-shadow:var(--shadow-sm); }
+.prov-section { display:none; }
+.prov-section.active { display:block; }
+.prov-header { border-radius:var(--radius-lg); padding:24px 28px; color:#fff; margin-bottom:24px; }
+.prov-header h2 { font-family:var(--font-display); font-size:28px; font-weight:800; margin-bottom:6px; }
+.prov-header p { font-size:13.5px; opacity:0.75; max-width:600px; line-height:1.7; }
+.prov-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+.prov-kpi { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:14px; text-align:center; }
+.prov-kpi-val { font-family:var(--font-display); font-size:24px; font-weight:800; }
+.prov-kpi-label { font-size:10px; opacity:0.65; text-transform:uppercase; letter-spacing:0.06em; margin-top:3px; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><img src="images/DOST Logo.png" alt="DOST Caraga Logo" class="nav-brand-logo"><div><div class="nav-brand-text">DOST Caraga Region XIII</div><div class="nav-brand-sub">Performance Review · FY 2024–2025</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="economic-profile.html">Economic Profile</a></li><li><a href="sti-portfolio.html">STI Portfolio</a></li>
+      <li class="nav-dropdown"><a href="#">Frameworks</a>
+        <div class="nav-dropdown-menu">
+          <a href="framework-fourpillar.html">Four Pillar Outcomes</a><a href="framework-horizon.html">3-Horizon Strategic Framework</a>
+          <a href="framework-pbbm.html">PBBM 8-Point Agenda</a><a href="framework-sdg.html">SDG Alignment</a>
+          <a href="framework-fame.html">FAME Sectors</a><a href="framework-strategies.html">DOST Strategies</a>
+        </div>
+      </li>
+      <li><a href="data-explorer.html">Data Explorer</a></li>
+      <li><a href="provinces.html" class="active">Provinces</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Geographic Analysis</div>
+    <h1>Provincial Profiles</h1>
+    <p>Province-level breakdown of DOST Caraga's STI investments, RDI centers, key projects, poverty data, and economic context for all five provinces: Agusan del Norte, Agusan del Sur, Surigao del Norte, Surigao del Sur, and Dinagat Islands.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Provincial Profiles</span></div>
+
+  <div class="prov-tab-bar">
+    <button class="prov-tab active" style="border-top-color:#1a3360" onclick="showProv('adn',this)">Agusan del Norte</button>
+    <button class="prov-tab" style="border-top-color:#1a56b0" onclick="showProv('ads',this)">Agusan del Sur</button>
+    <button class="prov-tab" style="border-top-color:#b8860b" onclick="showProv('sdn',this)">Surigao del Norte</button>
+    <button class="prov-tab" style="border-top-color:#0f766e" onclick="showProv('sds',this)">Surigao del Sur</button>
+    <button class="prov-tab" style="border-top-color:#7e22ce" onclick="showProv('di',this)">Dinagat Islands</button>
+  </div>
+
+  <!-- AGUSAN DEL NORTE -->
+  <div class="prov-section active" id="prov-adn">
+    <div class="prov-header" style="background:linear-gradient(135deg,#0b1e3d,#1a3360)">
+      <h2>Agusan del Norte</h2>
+      <p>The regional capital province hosting Butuan City as the seat of regional governance, commerce, and STI infrastructure. Caraga State University and DOST Caraga's regional office are both located here, making Agusan del Norte the primary hub of the regional innovation ecosystem.</p>
+      <div class="prov-kpis">
+        <div class="prov-kpi"><div class="prov-kpi-val" id="adn-proj">—</div><div class="prov-kpi-label">Projects</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val" id="adn-cost">—</div><div class="prov-kpi-label">Investment</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">19+</div><div class="prov-kpi-label">RDI Centers (CSU)</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">~20.8%</div><div class="prov-kpi-label">Family Poverty 2023</div></div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="analysis-block">
+          <h4>Provincial Development Context</h4>
+          <p>Agusan del Norte is home to Butuan City, a Highly Urbanized City that serves as the regional center for governance, commerce, and STI services. The province hosts the largest concentration of RDI centers in the region through Caraga State University's 19 research centers spanning nanoscience, robotics, ICT, mining, food innovation, and health technology. This institutional concentration gives Agusan del Norte a structural advantage in accessing DOST programs but also creates a risk of geographic inequity if frontier innovations do not cascade to rural municipalities.</p>
+          <p>Family poverty incidence in the province stands at approximately 20.8 percent (2023), which, while above the national average, represents a significant improvement from earlier periods. Butuan City's urban economy is the most diversified in the region, with active manufacturing, services, and retail sectors that have been direct beneficiaries of SETUP and LGIA modernization programs.</p>
+        </div>
+        <div class="analysis-block gold">
+          <h4>Key STI Investments</h4>
+          <p>Notable programs include the SMARTER AGUSAN: ADVANCE initiative (combining CEST and SSCP components for smart community development), the FastCharge EV Charging System in Butuan City (₱5,000,000 SSCP flagship), the InnovATE agro-industry program in Buenavista (₱4,000,000), the Caraga Integrated Gold Copper Mineral Processing Plant in Cabadbaran City, the MinERAL Hub, the Mulberry Demonstration Farm for Mined-Out Lands, and the Food Processing and Innovation Center. SETUP programs in the province range from large industrialscale investments (Amaris Merav Corporation's commissary facility at ₱5,000,000) to micro-enterprise interventions such as the T&M Ice Trading upgrade (₱175,000).</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Agusan del Norte: Projects by Program</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartADN"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGUSAN DEL SUR -->
+  <div class="prov-section" id="prov-ads">
+    <div class="prov-header" style="background:linear-gradient(135deg,#1a3360,#1a56b0)">
+      <h2>Agusan del Sur</h2>
+      <p>The largest province by land area in Caraga, characterized by the Agusan River watershed, extensive agroforestry resources, and a significant indigenous peoples population. Agusan del Sur faces the most persistent poverty challenges in the region but is the site of significant community-level STI interventions.</p>
+      <div class="prov-kpis">
+        <div class="prov-kpi"><div class="prov-kpi-val" id="ads-proj">—</div><div class="prov-kpi-label">Projects</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val" id="ads-cost">—</div><div class="prov-kpi-label">Investment</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">4</div><div class="prov-kpi-label">RDI Centers (ADSSU)</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">25.9%</div><div class="prov-kpi-label">Family Poverty 2023</div></div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="analysis-block">
+          <h4>Provincial Development Context</h4>
+          <p>Agusan del Sur, at 10,314 square kilometers, is the largest province in the region and one of the most biodiverse in the Philippines. The Agusan Marsh Wildlife Sanctuary, a Ramsar site of international importance, lies within its borders. The province's interior is predominantly rural and forested, with significant indigenous peoples communities (Manobo, Higaonon) concentrated in upland areas. Family poverty at 25.9 percent in 2023 — the highest among mainland Caraga provinces — reflects structural challenges including limited road access, geographic isolation, and dependence on subsistence agriculture.</p>
+          <p>Bayugan City, the lone city in the province, anchors a growing agricultural processing economy. The province's sago palm industry, palm oil plantations, and rice production provide commodity supply chains that DOST programs seek to upgrade through value-adding technologies.</p>
+        </div>
+        <div class="analysis-block teal">
+          <h4>Key STI Investments</h4>
+          <p>Significant programs include the Project CLEANEST in Prosperidad (ecological innovation for communities, ₱2,666,554), InnoWEAVE in Sibagat (weaving enterprise innovation), the Accelerating Agripreneurship, R&D in Agusan del Sur through the Agri-Based Business Incubator in Bunawan (₱3,000,000), the sago flour product development program, the Fostering Artisan Empowerment timber handicraft program in Talacogon, and multiple SETUP projects in Bayugan City, San Francisco, and Trento covering food processing, tailoring, furniture, and agricultural milling.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Agusan del Sur: Projects by Program</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartADS"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SURIGAO DEL NORTE -->
+  <div class="prov-section" id="prov-sdn">
+    <div class="prov-header" style="background:linear-gradient(135deg,#b8860b,#d4a017)">
+      <h2>Surigao del Norte</h2>
+      <p>The most populous province in Caraga, home to Surigao City and the internationally renowned Siargao Island. The province combines a mineral-rich interior with a rapidly growing tourism and fishery economy along its extensive island coastlines.</p>
+      <div class="prov-kpis">
+        <div class="prov-kpi"><div class="prov-kpi-val" id="sdn-proj">—</div><div class="prov-kpi-label">Projects</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val" id="sdn-cost">—</div><div class="prov-kpi-label">Investment</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">8</div><div class="prov-kpi-label">RDI Centers (SNSU)</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">~6.8%</div><div class="prov-kpi-label">Family Poverty 2023</div></div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="analysis-block">
+          <h4>Provincial Development Context</h4>
+          <p>Surigao del Norte is the most economically diverse province in Caraga. Surigao City serves as the province's commercial and governmental center, while Siargao Island has emerged as one of the Philippines' premier international tourism destinations — a transformation that has created new economic opportunities but also new challenges in sustainable tourism management. The province has the lowest family poverty incidence in Caraga at approximately 6.8 percent (2023), a testament to its more developed economy and greater economic diversification.</p>
+          <p>The province's 26 municipalities include numerous island communities served by the PRISM Science Museum in Surigao City, iMAKE facilities at the Caraga Regional Science High School and Siargao Island, and the five innovation centers of Surigao del Norte State University covering food, digital transformation, water quality, smart agriculture, bamboo engineering, and metal processing.</p>
+        </div>
+        <div class="analysis-block gold">
+          <h4>Key STI Investments</h4>
+          <p>Key programs include the SMART SDN: Science and Technology for Surigao del Norte toward Smart Province initiative in Mainit (₱3,960,000 LGIA + ₱2,594,500 SSCP), the Provincial Research Innovation and Science Museum (PRISM) in Surigao City, the SIDLAK Smart Innovation program in Mainit (CEST + SSCP), the Cultivating an Innovative Ecosystem through the Provincial Research Innovation and Science Museum, and multiple SETUP projects in Surigao City, Dapa, Bacuag, General Luna, and Malimono covering food processing, machine shops, and catering services. The SMART SDN program is the province's flagship multi-year STI initiative, integrating renewable energy, digital governance, and agricultural innovation.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Surigao del Norte: Projects by Program</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartSDN"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SURIGAO DEL SUR -->
+  <div class="prov-section" id="prov-sds">
+    <div class="prov-header" style="background:linear-gradient(135deg,#0f766e,#0d9488)">
+      <h2>Surigao del Sur</h2>
+      <p>A coastal and forested province known for its rich marine biodiversity and extensive agroforestry resources. Surigao del Sur hosts North Eastern Mindanao State University (NEMSU), a major research partner with 12 RDI centers, and is the site of innovative CEST and SSCP programs.</p>
+      <div class="prov-kpis">
+        <div class="prov-kpi"><div class="prov-kpi-val" id="sds-proj">—</div><div class="prov-kpi-label">Projects</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val" id="sds-cost">—</div><div class="prov-kpi-label">Investment</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">12</div><div class="prov-kpi-label">RDI Centers (NEMSU)</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">~10.3%</div><div class="prov-kpi-label">Family Poverty 2023</div></div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="analysis-block">
+          <h4>Provincial Development Context</h4>
+          <p>Surigao del Sur has a distinctly coastal and fishing economy in its eastern municipalities, transitioning to agroforestry and timber production in its interior areas. Tandag City serves as the provincial capital, while Bislig City is a major industrial center with a significant pulp and paper industry. Family poverty at 10.3 percent (2023) is the second-lowest in Caraga, reflecting the relatively diversified provincial economy and the strong institutional presence of NEMSU.</p>
+          <p>NEMSU's 12 RDI centers are particularly strong in fishery science, marine ecology, climate-smart agriculture, agro-forestry, and food technology — well-matched to the province's natural resource profile. The FRIEND-FIC (Food Research and Innovation to Enhance NEMSU-developed Dried Fish Ice Cream) program exemplifies the university's capacity for innovative food product development.</p>
+        </div>
+        <div class="analysis-block blue">
+          <h4>Key STI Investments</h4>
+          <p>Key programs include the SMART Tandag: Building a Smart and Sustainable City through STI for Tandag City Waters (₱2,000,000 SSCP), the Project FARM: Facilitating Agricultural Resilience and Modernization in Smart Community of San Miguel (₱2,000,000 CEST), the NEMSU-based Entrepreneurship R&D in Surigao del Sur (₱2,216,583 LGIA), the Empowering LGU Bislig City through Caulerpa Farming, and SETUP projects in Tandag City, Bislig City, Cantilan, Marihatag, Hinatuan, Tago, Bayabas, and Lingig covering diverse enterprises including machine shops, food processors, bakeshops, tent manufacturing, and internet service providers.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Surigao del Sur: Projects by Program</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartSDS"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DINAGAT ISLANDS -->
+  <div class="prov-section" id="prov-di">
+    <div class="prov-header" style="background:linear-gradient(135deg,#7e22ce,#9333ea)">
+      <h2>Dinagat Islands</h2>
+      <p>The youngest and most isolated province in Caraga, created in 2006 and facing persistent poverty and geographic challenges. Despite its challenges, Dinagat Islands is the site of highly targeted STI interventions addressing waste management, water access, food security, and renewable energy.</p>
+      <div class="prov-kpis">
+        <div class="prov-kpi"><div class="prov-kpi-val" id="di-proj">—</div><div class="prov-kpi-label">Projects</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val" id="di-cost">—</div><div class="prov-kpi-label">Investment</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">1</div><div class="prov-kpi-label">iHUB + iMAKE</div></div>
+        <div class="prov-kpi"><div class="prov-kpi-val">30.7%</div><div class="prov-kpi-label">Family Poverty 2023</div></div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="analysis-block">
+          <h4>Provincial Development Context</h4>
+          <p>Dinagat Islands is the smallest province in Caraga by population (approximately 120,000) and among the most physically isolated. Its island geography creates persistent barriers to service delivery, market access, and infrastructure investment. Family poverty at 30.7 percent (2023) — the highest in the region and an increase from 30.3 percent in 2021 — reflects the cumulative impact of Typhoon Odette (2021) and the chronic underinvestment in the province's productive infrastructure.</p>
+          <p>Despite these challenges, Dinagat Islands has significant natural assets: abundant nickel deposits (now subject to moratorium on new mining permits), coastal fishery resources, and growing awareness of the province's ecotourism potential. The province's STI ecosystem is anchored by the DOST Caraga iHUB in San Jose and a single iMAKE facility, supplemented by the targeted LGIA, CEST, and SSCP programs.</p>
+        </div>
+        <div class="analysis-block red">
+          <h4>Targeted STI Interventions</h4>
+          <p>DOST Caraga has implemented a deliberate equity-programming approach for Dinagat Islands. The WISE Dinagat (Waste Innovations for Sustainable Environment) program addresses solid waste management infrastructure (₱2,293,132). The Empowering Communities through Innovative Water Systems using Renewable Energy in Libjo (₱1,321,927) addresses the province's clean water access challenges. The OneISLAdinagat suite of programs covers food security (SECURE), waste-to-worth processing, and cassava development (CAMANTING). The OASIS program under SSCP (₱1,365,560) further advances agro-technological solutions for food security in San Jose. Nine SETUP projects in San Jose, Loreto, and Tubajon address enterprise modernization at the micro level. Collectively, these programs represent the most comprehensive multi-program STI coverage of any province in the region relative to its population size.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Dinagat Islands: Projects by Program</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartDI"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border);margin-top:24px">
+    <a href="framework-strategies.html" style="color:var(--blue);text-decoration:none;font-size:13px">← DOST Strategies</a>
+    <a href="data-explorer.html" style="color:var(--blue);text-decoration:none;font-size:13px">Data Explorer →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left"><strong>DOST Caraga Region XIII</strong> · Performance Review Dashboard · FY 2024–2025</div>
+    <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="data-explorer.html">Data Explorer</a></li></ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+function showProv(id, btn) {
+  document.querySelectorAll('.prov-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.prov-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('prov-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+const provMap = {
+  'Agusan del Norte':'adn','Agusan del Sur':'ads',
+  'Surigao del Norte':'sdn','Surigao del Sur':'sds','Dinagat Islands':'di'
+};
+const provColors2 = {adn:'#1a3360',ads:'#1a56b0',sdn:'#b8860b',sds:'#0f766e',di:'#7e22ce'};
+const progColors = {SETUP:'#1a3360',LGIA:'#b8860b',CEST:'#0f766e',SSCP:'#7e22ce'};
+
+Object.entries(provMap).forEach(([prov, id]) => {
+  const projs = PROJECTS.filter(p => p.prov === prov);
+  const cost = projs.reduce((a,p)=>a+p.cost,0);
+  const el = document.getElementById(id+'-proj');
+  if(el) el.textContent = projs.length;
+  const ce = document.getElementById(id+'-cost');
+  if(ce) ce.textContent = fmt(cost);
+  const pc = countBy(projs, p => p.prog);
+  const canv = document.getElementById('chart'+id.toUpperCase());
+  if(canv) {
+    new Chart(canv,{type:'doughnut',
+      data:{labels:Object.keys(pc),datasets:[{data:Object.values(pc),
+        backgroundColor:Object.keys(pc).map(k=>progColors[k]),borderColor:'#fff',borderWidth:3}]},
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:'right',labels:{boxWidth:10,font:{size:11},color:'#475569'}}}}});
+  }
+});
+</script>
+</body>
+</html>

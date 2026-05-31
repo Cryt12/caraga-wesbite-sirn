@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STI Portfolio — DOST Caraga Performance Review</title>
+<link rel="icon" href="images/DOST Logo.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><img src="images/DOST Logo.png" alt="DOST Caraga Logo" class="nav-brand-logo"><div><div class="nav-brand-text">DOST Caraga Region XIII</div><div class="nav-brand-sub">Performance Review · FY 2024–2025</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="economic-profile.html">Economic Profile</a></li>
+      <li><a href="sti-portfolio.html" class="active">STI Portfolio</a></li>
+      <li class="nav-dropdown"><a href="#">Frameworks</a>
+        <div class="nav-dropdown-menu">
+          <a href="framework-fourpillar.html">Four Pillar Outcomes</a><a href="framework-horizon.html">3-Horizon Strategic Framework</a>
+          <a href="framework-pbbm.html">PBBM 8-Point Agenda</a><a href="framework-sdg.html">SDG Alignment</a>
+          <a href="framework-fame.html">FAME Sectors</a><a href="framework-strategies.html">DOST Strategies</a>
+        </div>
+      </li>
+      <li><a href="data-explorer.html">Data Explorer</a></li><li><a href="provinces.html">Provinces</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Science, Technology and Innovation</div>
+    <h1>STI Portfolio Overview</h1>
+    <p>A comprehensive review of DOST Caraga's science, technology, and innovation investments for FY 2024–2025, covering 122 projects and 60 Research, Development, and Innovation Centers across five programs and all five provinces.</p>
+    <div class="hero-meta">
+      <span class="hero-badge">122 Projects</span>
+      <span class="hero-badge">60 RDI Centers</span>
+      <span class="hero-badge">Total Investment: <strong>₱181M+</strong></span>
+      <span class="hero-badge">4 Programs: SETUP · LGIA · CEST · SSCP</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>STI Portfolio</span></div>
+
+  <!-- SECTION 1: OVERVIEW -->
+  <div class="section-block">
+    <div class="section-label">Portfolio Overview</div>
+    <h2 class="section-title">Program Structure and Investment Summary</h2>
+    <p class="section-intro">DOST Caraga's FY 2024–2025 portfolio is organized under four flagship programs, each targeting distinct elements of the regional STI ecosystem — from grassroots MSME modernization to smart community development and future industry creation.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card navy"><div class="stat-value">122</div><div class="stat-label">Total Projects</div><div class="stat-note">FY 2024, 2025, and multi-year</div></div>
+      <div class="stat-card gold"><div class="stat-value">60</div><div class="stat-label">RDI Centers</div><div class="stat-note">Hosted by SUCs and DOST Caraga</div></div>
+      <div class="stat-card teal"><div class="stat-value">₱181M+</div><div class="stat-label">Total Project Cost</div><div class="stat-note">Combined FY 2024 and 2025</div></div>
+      <div class="stat-card green"><div class="stat-value">5</div><div class="stat-label">Provinces Covered</div><div class="stat-note">Plus regionwide interventions</div></div>
+      <div class="stat-card blue"><div class="stat-value">20</div><div class="stat-label">DOST Strategies Addressed</div><div class="stat-note">S-01 through S-20</div></div>
+      <div class="stat-card purple"><div class="stat-value">17</div><div class="stat-label">SDGs Addressed</div><div class="stat-note">All UN Sustainable Development Goals</div></div>
+    </div>
+
+    <div class="analysis-block">
+      <h4>Portfolio Architecture and Strategic Orientation</h4>
+      <p>The DOST Caraga portfolio for FY 2024–2025 reflects a deliberate strategic architecture aligned with the Department's Three-Horizon Framework. <strong>Horizon 1</strong> objectives — centered on MSME modernization and productivity enhancement — are served primarily by the Small Enterprise Technology Upgrading Program (SETUP), which accounts for 57 of the 122 projects in the portfolio. These near-term, high-reach interventions provide direct technology uplift to small enterprises and cooperatives, with individual project costs ranging from modest ₱175,000 grants to ₱5 million modernization packages.</p>
+      <p>At the <strong>Horizon 2</strong> level, the Local Government and Institutions Assistance (LGIA) program constitutes the portfolio's largest program by investment value, supporting 52 projects that span food innovation, agroforestry, mineral processing, and ecosystem-level innovation infrastructure. LGIA projects tend to be more complex, multi-stakeholder, and multi-year in nature, with significant leverage from partner LGU and SUC co-investments.</p>
+      <p><strong>Horizon 3</strong> objectives — the creation of future industries and smart sustainable communities — are addressed through the Community Engagement Science and Technology Program (CEST) and the Smart and Sustainable Communities Program (SSCP), which together account for 13 projects. These programs represent the most forward-looking component of the portfolio, with emphasis on AI, digital infrastructure, renewable energy, and circular economy innovations.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Projects by Program</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartProg"></canvas></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Investment by Program (₱ Million)</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartProgCost"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: PROGRAMS -->
+  <div class="section-block">
+    <div class="section-label">Program Profiles</div>
+    <h2 class="section-title">The Four Flagship Programs</h2>
+
+    <div class="panel mb-24">
+      <div class="panel-header" style="background:linear-gradient(90deg,#0b1e3d,#1a3360);border:none">
+        <div><div class="panel-title" style="color:#fff">Small Enterprise Technology Upgrading Program (SETUP)</div><div class="panel-subtitle" style="color:rgba(255,255,255,0.6)">MSME Modernization · Horizon 1 Focus</div></div>
+        <span class="badge badge-navy" id="setupCount"></span>
+      </div>
+      <div class="panel-body">
+        <div class="grid-2">
+          <div>
+            <p style="font-size:13.5px;color:var(--text2);line-height:1.8;margin-bottom:14px">SETUP is DOST's principal program for direct technology transfer and equipment upgrading to Micro, Small, and Medium Enterprises (MSMEs). Under the review period, SETUP funded <strong>57 projects</strong> across all five provinces, targeting firms in food processing, metal fabrication, printing, tailoring, aquaculture, agriculture milling, and renewable energy adoption. Individual SETUP grants range from ₱175,000 to ₱5,000,000 and are provided to enterprises that commit to matching investments, productivity targets, and reporting obligations.</p>
+            <p style="font-size:13.5px;color:var(--text2);line-height:1.8">The program directly addresses <strong>Horizon 1 Key Results</strong>: modernizing 10,000 MSMEs in 24 months, achieving 30 percent productivity increases per engaged enterprise, and sustaining or upgrading 200,000 jobs through technology adoption. All 57 SETUP projects are aligned to the Wealth Creation Fostered (O2-WCF) strategic outcome, with a subset also tagged to Sustainability Institutionalized (O4-SI) for projects incorporating renewable energy systems.</p>
+          </div>
+          <div>
+            <div class="chart-wrap-sm"><canvas id="chartSetupProv"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mb-24">
+      <div class="panel-header" style="background:linear-gradient(90deg,#b8860b,#d4a017);border:none">
+        <div><div class="panel-title" style="color:#fff">Local Government and Institutions Assistance (LGIA)</div><div class="panel-subtitle" style="color:rgba(255,255,255,0.7)">Ecosystem Development · Horizon 2 &amp; 3 Focus</div></div>
+        <span class="badge badge-gold" id="lgiaCount"></span>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:13.5px;color:var(--text2);line-height:1.8;margin-bottom:14px">LGIA supports LGU and institutional partners in building STI infrastructure, R&D capacity, and innovation ecosystems. It is the most diverse program in the portfolio, funding Food Innovation Centers, Science Museums, Agricultural Business Incubators, Smart Community pilots, Mining Innovation Hubs, and the NOVA AI Hub. LGIA accounts for the majority of total portfolio investment owing to the higher per-project cost of institutional infrastructure.</p>
+        <p style="font-size:13.5px;color:var(--text2);line-height:1.8">Notable LGIA programs include the <strong>Accelerating Food Research and Innovation in Caraga (AFRIC)</strong> umbrella, the <strong>SARAI Plus Project</strong> for precision agriculture, the <strong>IGNITE</strong> startup ecosystem program, and the <strong>ACCESS</strong> Smart and Sustainable Communities initiative. LGIA projects consistently involve multiple strategic alignments — often spanning PBBM Points 3, 5, 7, and 8 simultaneously — and address the broadest range of SDGs.</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header" style="background:linear-gradient(90deg,#0f766e,#0d9488);border:none">
+          <div><div class="panel-title" style="color:#fff">Community Engagement Science and Technology (CEST)</div><div class="panel-subtitle" style="color:rgba(255,255,255,0.6)">Community-Centered · Horizon 3</div></div>
+        </div>
+        <div class="panel-body">
+          <p style="font-size:13px;color:var(--text2);line-height:1.75">CEST supports provincial LGU-led STI programs through a structured planning-to-implementation framework. In FY 2024–2025, eight CEST projects were implemented covering smart agro-innovation in Surigao del Sur (Project FARM), water systems in Surigao del Norte (TECHFLOW), clean technology for communities in Agusan del Sur (Project CLEANEST), weaving enterprise development in Agusan del Sur (InnoWEAVE), and smart community development in Dinagat Islands (Project STRIVE). CEST projects are characterized by strong participatory design and multi-stakeholder governance.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header" style="background:linear-gradient(90deg,#7e22ce,#9333ea);border:none">
+          <div><div class="panel-title" style="color:#fff">Smart and Sustainable Communities Program (SSCP)</div><div class="panel-subtitle" style="color:rgba(255,255,255,0.6)">Future Cities · Horizon 3</div></div>
+        </div>
+        <div class="panel-body">
+          <p style="font-size:13px;color:var(--text2);line-height:1.75">SSCP is the most recent program in the portfolio and the most directly aligned with Horizon 3 (Future Industries) objectives. Six SSCP projects in FY 2025 address smart city infrastructure, EV charging systems, agro-optimization, water quality management, and sustainable community roadmaps. The SMARTER AGUSAN: FastCharge project (₱5,000,000) for EV charging in Butuan City and the SMART Tandag coastal water management project represent flagship SSCP investments that position Caraga as a pioneer in future-ready municipal governance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: RDI CENTERS -->
+  <div class="section-block">
+    <div class="section-label">Research Infrastructure</div>
+    <h2 class="section-title">Research, Development, and Innovation Centers</h2>
+    <p class="section-intro">The 60 RDI Centers constitute Caraga's primary research infrastructure, embedded within the region's four state universities and directly under DOST Caraga management. These centers provide the R&D backbone for technology generation, testing, and transfer across the portfolio.</p>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">RDI Centers by Host Institution</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartRDI"></canvas></div></div>
+      </div>
+      <div>
+        <div class="analysis-block">
+          <h4>Caraga State University — Dominant Research Hub</h4>
+          <p>CSU hosts 19 of the 60 RDI centers, the largest concentration in the region. These range from the Center for Nanoscience and Technology (CeNTRE) and the Center for Robotics, Automation and Fabrication Technology (CRAFT) to the Virtual Learning Research Center and two Food Innovation Center nodes. CSU's research portfolio spans all five FAME sectors and is uniquely positioned to support the mining, ICT, and advanced manufacturing priorities of Horizon 3.</p>
+        </div>
+        <div class="analysis-block gold">
+          <h4>DOST Caraga — Distributed Innovation Network</h4>
+          <p>DOST Caraga directly manages 17 centers, including the five iHUB Innovation Hubs (one per province), five iMAKE makerspaces (in schools and public libraries), the Provincial Research Innovation and Science Museum (PRISM) in Surigao del Norte, and specialty hubs for food processing, bamboo textiles, and mineral processing. This distributed network ensures that innovation infrastructure reaches communities outside university campuses.</p>
+        </div>
+        <div class="analysis-block teal">
+          <h4>NEMSU and SNSU — Sectoral Specialization</h4>
+          <p>North Eastern Mindanao State University hosts 12 centers strongly oriented toward fishery, marine ecology, and climate-smart agriculture — reflecting Surigao del Sur's coastal and fishery-dependent economy. Surigao del Norte State University hosts 8 centers with notable strength in bamboo engineering, smart agriculture, and metal innovation — aligned with the province's ecotourism and mineral resource endowments.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header"><div class="panel-title">RDI Centers by Province</div></div>
+      <div class="panel-body"><div class="chart-wrap-sm"><canvas id="chartRDIProv"></canvas></div></div>
+    </div>
+  </div>
+
+  <!-- PROVINCIAL INVESTMENT TABLE -->
+  <div class="section-block">
+    <div class="section-label">Geographic Distribution</div>
+    <h2 class="section-title">Investment Distribution by Province</h2>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Province</th><th>Projects</th><th>Total Investment</th><th>Avg per Project</th><th>RDI Centers</th><th>Primary Programs</th></tr></thead>
+        <tbody id="provTable"></tbody>
+      </table>
+    </div>
+
+    <div class="analysis-block mt-24">
+      <h4>Geographic Equity and Spatial Programming Considerations</h4>
+      <p>An analysis of the geographic distribution of the STI portfolio reveals a pronounced concentration of regionwide projects under LGIA — accounting for 40 projects with a combined investment of approximately ₱59 million — which reflects the nature of regional ecosystem-building programs that serve all provinces simultaneously. Among province-specific investments, <strong>Agusan del Norte</strong> leads in project count and investment value, commensurate with its status as host to the regional capital (Butuan City) and the largest concentration of RDI centers at Caraga State University.</p>
+      <p>The <strong>Dinagat Islands</strong>, while geographically isolated and historically underserved, received targeted investments under LGIA (WISE Dinagat, OneISLAdinagat), CEST (Project STRIVE in Loreto), and SSCP (OASIS in San Jose) — a reflection of deliberate equity programming that addresses the province's chronic poverty and climate vulnerability. The <strong>Multi-Province</strong> classification covers projects that span boundaries, particularly those integrating Agusan del Norte, Agusan del Sur, and Surigao del Norte into single watershed or ecosystem frameworks.</p>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="economic-profile.html" style="color:var(--blue);text-decoration:none;font-size:13px">← Economic Profile</a>
+    <a href="framework-fourpillar.html" style="color:var(--blue);text-decoration:none;font-size:13px">Framework Analysis →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left"><strong>Department of Science and Technology — Caraga Region (Region XIII)</strong><br>Performance Review Dashboard · Fiscal Years 2024–2025</div>
+    <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="data-explorer.html">Data Explorer</a></li></ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+const progC = countBy(PROJECTS, p => p.prog);
+document.getElementById('setupCount').textContent = (progC['SETUP']||0) + ' projects';
+document.getElementById('lgiaCount').textContent = (progC['LGIA']||0) + ' projects';
+
+const progColors = {SETUP:'#1a3360',LGIA:'#b8860b',CEST:'#0f766e',SSCP:'#7e22ce'};
+
+new Chart(document.getElementById('chartProg'),{type:'doughnut',
+  data:{labels:Object.keys(progC),datasets:[{data:Object.values(progC),
+    backgroundColor:Object.keys(progC).map(k=>progColors[k]),borderColor:'#fff',borderWidth:3}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{boxWidth:10,font:{size:11},color:'#475569'}}}}});
+
+const progCost={};
+PROJECTS.forEach(p=>{ progCost[p.prog]=(progCost[p.prog]||0)+p.cost; });
+new Chart(document.getElementById('chartProgCost'),{type:'bar',
+  data:{labels:Object.keys(progCost),datasets:[{data:Object.values(progCost).map(v=>v/1e6),
+    backgroundColor:Object.keys(progCost).map(k=>progColors[k]),borderRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8'}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8',callback:v=>'₱'+v+'M'}}}}});
+
+const setupProv = {};
+PROJECTS.filter(p=>p.prog==='SETUP').forEach(p=>{
+  const pv=p.prov.replace('del Norte','del N.').replace('del Sur','del S.');
+  setupProv[pv]=(setupProv[pv]||0)+1;
+});
+new Chart(document.getElementById('chartSetupProv'),{type:'bar',
+  data:{labels:Object.keys(setupProv),datasets:[{data:Object.values(setupProv),
+    backgroundColor:['#1a3360','#1a56b0','#b8860b','#0f766e','#7e22ce'],borderRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8',font:{size:9}}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8'}}}}});
+
+const rdiHost = countBy(RDI, r => r.host);
+new Chart(document.getElementById('chartRDI'),{type:'doughnut',
+  data:{labels:Object.keys(rdiHost),datasets:[{data:Object.values(rdiHost),
+    backgroundColor:['#1a3360','#1a56b0','#b8860b','#0f766e','#7e22ce'],borderColor:'#fff',borderWidth:3}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10},color:'#475569'}}}}});
+
+const rdiProv = countBy(RDI, r => r.prov);
+new Chart(document.getElementById('chartRDIProv'),{type:'bar',
+  data:{labels:Object.keys(rdiProv),datasets:[{data:Object.values(rdiProv),
+    backgroundColor:['#1a3360','#1a56b0','#b8860b','#0f766e','#7e22ce'],borderRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8',font:{size:10}}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8'}}}}});
+
+const provData={};
+PROJECTS.forEach(p=>{
+  const pv=p.prov.includes(',') ? 'Multi-Province' : p.prov;
+  if(!provData[pv]) provData[pv]={count:0,cost:0};
+  provData[pv].count++;
+  provData[pv].cost+=p.cost;
+});
+const rdiProvCount={};
+RDI.forEach(r=>{rdiProvCount[r.prov]=(rdiProvCount[r.prov]||0)+1;});
+const tb=document.getElementById('provTable');
+const provColors={'Agusan del Norte':'#1a3360','Agusan del Sur':'#1a56b0','Surigao del Norte':'#b8860b','Surigao del Sur':'#0f766e','Dinagat Islands':'#7e22ce','Regionwide':'#475569','Multi-Province':'#94a3b8'};
+Object.entries(provData).sort((a,b)=>b[1].cost-a[1].cost).forEach(([pv,d])=>{
+  const progs=[...new Set(PROJECTS.filter(p=>(p.prov.includes(',')? 'Multi-Province': p.prov)===pv).map(p=>p.prog))].join(', ');
+  tb.innerHTML+=`<tr>
+    <td><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${provColors[pv]||'#94a3b8'};margin-right:6px"></span>${pv}</td>
+    <td>${d.count}</td><td>${fmt(d.cost)}</td><td>${fmt(d.cost/d.count)}</td>
+    <td>${rdiProvCount[pv]||'—'}</td><td>${progs}</td>
+  </tr>`;
+});
+</script>
+</body>
+</html>

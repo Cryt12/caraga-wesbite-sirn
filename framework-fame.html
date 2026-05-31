@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAME Sectors — DOST Caraga Performance Review</title>
+<link rel="icon" href="images/DOST Logo.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+.fame-card { border-radius:var(--radius-lg); padding:22px; color:#fff; margin-bottom:16px; }
+.fame-card h4 { font-family:var(--font-display); font-size:17px; font-weight:700; margin-bottom:10px; }
+.fame-card p { font-size:13px; line-height:1.75; opacity:0.85; }
+.fame-stat { font-family:var(--font-display); font-size:36px; font-weight:800; }
+.fame-sub { font-size:11px; opacity:0.65; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><div class="nav-brand-mark">DC</div><div><div class="nav-brand-text">DOST Caraga Region XIII</div><div class="nav-brand-sub">Performance Review · FY 2024–2025</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="economic-profile.html">Economic Profile</a></li><li><a href="sti-portfolio.html">STI Portfolio</a></li>
+      <li class="nav-dropdown"><a href="#" class="active">Frameworks</a>
+        <div class="nav-dropdown-menu">
+          <a href="framework-fourpillar.html">Four Pillar Outcomes</a><a href="framework-horizon.html">3-Horizon Strategic Framework</a>
+          <a href="framework-pbbm.html">PBBM 8-Point Agenda</a><a href="framework-sdg.html">SDG Alignment</a>
+          <a href="framework-fame.html" style="color:var(--blue)!important">FAME Sectors</a>
+          <a href="framework-strategies.html">DOST Strategies</a>
+        </div>
+      </li>
+      <li><a href="data-explorer.html">Data Explorer</a></li><li><a href="provinces.html">Provinces</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">i2FAME Framework · Sector Analysis</div>
+    <h1>FAME Sector Analysis</h1>
+    <p>An analysis of DOST Caraga's innovation investments across the five sectors of the Innovation-integrated Fishery, Agroforestry, Mining, and Ecotourism (i2FAME) framework — Caraga's primary regional development model for STI-driven economic transformation.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="sti-portfolio.html">STI Portfolio</a><span>›</span><span>FAME Sectors</span></div>
+
+  <div class="section-block">
+    <div class="section-label">Framework Overview</div>
+    <h2 class="section-title">The i2FAME Framework and Caraga's Natural Advantage</h2>
+    <p class="section-intro">The i2FAME (Innovation-integrated Fishery, Agroforestry, Mining, and Ecotourism) framework is Caraga Region's distinctive approach to development — one that roots STI investments in the region's comparative advantages in natural resource sectors while applying innovation to add value, improve sustainability, and create inclusive economic opportunities.</p>
+
+    <div class="analysis-block">
+      <h4>The Strategic Logic of i2FAME</h4>
+      <p>The i2FAME framework is premised on the recognition that Caraga's natural resource endowments — its fishery-rich coastlines, agricultural interior, mineral deposits, and ecotourism assets — are the most durable basis for regional comparative advantage. The framework's innovation dimension (the "i2" prefix) signals a deliberate shift from extractive to knowledge-intensive modes of resource utilization: processing over raw export, high-value specialty products over commodity production, and sustainable resource management over depletion-driven growth.</p>
+      <p>The Cross-Cutting sector in the FAME taxonomy captures programs and interventions that serve multiple sectors simultaneously or operate in enabling functions (ICT, governance, education, energy) that benefit all FAME sectors. The majority of SETUP projects — which serve enterprises across diverse industries — are appropriately classified as Cross-Cutting.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Projects by FAME Sector</div><div class="panel-subtitle">Projects may serve multiple sectors</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartFAME"></canvas></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Investment by FAME Sector (₱ Million)</div></div>
+        <div class="panel-body"><div class="chart-wrap"><canvas id="chartFAMECost"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Sector Deep Dives</div>
+    <h2 class="section-title">Sector-by-Sector Analysis</h2>
+
+    <div class="fame-card" style="background:linear-gradient(135deg,#0f766e,#0d9488)">
+      <div class="grid-2" style="align-items:center">
+        <div><div class="fame-stat" id="fishCount">—</div><div class="fame-sub">projects in Fishery sector</div>
+          <h4 style="margin-top:12px">Fishery Sector</h4>
+          <p>The Fishery sector receives targeted attention through food innovation programs at NEMSU and SNSU, the Caulerpa seaweed farming program in Bislig, the SMART Tandag coastal water management project, and RDI centers at CSU and NEMSU focused on aquamarine life sustainability. Caraga's extensive coastline and inland fishery resources — spanning the Agusan River system and the waters of Surigao del Norte's island municipalities — represent significant untapped value-addition opportunities.</p>
+        </div>
+        <div class="chart-wrap-sm"><canvas id="chartFishProv"></canvas></div>
+      </div>
+    </div>
+
+    <div class="fame-card" style="background:linear-gradient(135deg,#15803d,#16a34a)">
+      <div class="grid-2" style="align-items:center">
+        <div><div class="fame-stat" id="agroCount">—</div><div class="fame-sub">projects in Agroforestry sector</div>
+          <h4 style="margin-top:12px">Agroforestry Sector</h4>
+          <p>Agroforestry is the most extensively served natural-resource sector in the DOST Caraga portfolio, spanning palm oil, bamboo, cacao, coffee, rice, cassava, sago, and native chicken production systems. Key programs include the SARAI Plus Project for precision agriculture, the Food Innovation Centers network, the Integrated Futures for Sustainable Key Commodity Sectors (I-FASST), and multiple rice mill and agricultural processing upgrades under SETUP. The Mulberry Demonstration Farm for Mined-Out Lands bridges agroforestry and mining rehabilitation — exemplifying the i2FAME framework's integrative logic.</p>
+        </div>
+        <div class="chart-wrap-sm"><canvas id="chartAgroProv"></canvas></div>
+      </div>
+    </div>
+
+    <div class="fame-card" style="background:linear-gradient(135deg,#1a3360,#1a56b0)">
+      <div class="grid-2" style="align-items:center">
+        <div><div class="fame-stat" id="mineCount">—</div><div class="fame-sub">projects in Mining sector</div>
+          <h4 style="margin-top:12px">Mining and Mineral Processing</h4>
+          <p>The Mining sector, while represented by a relatively small number of projects (four), carries significant strategic weight given Caraga's position as one of the Philippines' premier mineral production regions. The flagship MinERAL Hub (Mineral Processing Innovation Hub) at Cabadbaran City, supported by the Caraga Integrated Gold Copper Mineral Processing Plant and two specialized RDI centers at CSU (SuMMO and MinRES), positions Caraga to capture higher-value mineral processing activities rather than exporting raw ores. The Mulberry Demonstration Farm for Mined-Out Lands additionally addresses the environmental rehabilitation obligations associated with mining operations.</p>
+        </div>
+        <div class="chart-wrap-sm"><canvas id="chartMineProv"></canvas></div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="fame-card" style="background:linear-gradient(135deg,#b8860b,#d4a017)">
+        <div class="fame-stat" id="ecoCount">—</div><div class="fame-sub">projects in Ecotourism sector</div>
+        <h4 style="margin-top:12px">Ecotourism Sector</h4>
+        <p>Ecotourism receives targeted attention through the Fostering Artisan Empowerment through Innovative Timber-based Handicraft Processing program (which serves Agusan del Sur's cultural tourism economy) and the Tourism and SMEs Innovation Research Center at NEMSU. While the number of directly tagged projects is modest, the sector's importance is growing with the emergence of Siargao Island in Surigao del Norte as an international tourism destination and the increasing linkage between community-based ecotourism and indigenous peoples' economic development.</p>
+      </div>
+      <div style="align-self:start">
+        <div class="findings-box">
+          <h3>Strategic Observations on FAME Alignment</h3>
+          <ul class="findings-list">
+            <li>The <strong>Cross-Cutting</strong> category dominates the portfolio, confirming that DOST Caraga's enabling programs — digital infrastructure, science education, communication, governance — serve the entire regional economy rather than single sectors.</li>
+            <li>The <strong>Agroforestry</strong> sector's strong representation reflects Caraga's agricultural vocation and the alignment with food security priorities under PBBM-08.</li>
+            <li>The <strong>Mining</strong> sector's modest project count belies its economic significance; deepening the innovation pipeline for mineral processing remains a strategic priority for FY 2026.</li>
+            <li>The <strong>Ecotourism</strong> sector remains the least-developed FAME sector in the portfolio. Given Siargao's international profile and the growing demand for community-based ecotourism, there is significant potential for expanded STI investment in this area.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="framework-sdg.html" style="color:var(--blue);text-decoration:none;font-size:13px">← SDG Alignment</a>
+    <a href="framework-strategies.html" style="color:var(--blue);text-decoration:none;font-size:13px">DOST Strategies →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left"><strong>DOST Caraga Region XIII</strong> · Performance Review Dashboard · FY 2024–2025</div>
+    <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="data-explorer.html">Data Explorer</a></li></ul>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+const fameCounts = countBy(PROJECTS, p => p.fame);
+const fameCosts = {};
+PROJECTS.forEach(p => p.fame.forEach(f => { fameCosts[f]=(fameCosts[f]||0)+p.cost; }));
+
+const fameOrder = ['Cross-Cutting','Agroforestry','Fishery','Mining','Ecotourism'];
+const fameColors = ['#1a3360','#15803d','#0f766e','#1a56b0','#b8860b'];
+
+document.getElementById('fishCount').textContent = fameCounts['Fishery']||0;
+document.getElementById('agroCount').textContent = fameCounts['Agroforestry']||0;
+document.getElementById('mineCount').textContent = fameCounts['Mining']||0;
+document.getElementById('ecoCount').textContent = fameCounts['Ecotourism']||0;
+
+new Chart(document.getElementById('chartFAME'),{type:'doughnut',
+  data:{labels:fameOrder,datasets:[{data:fameOrder.map(f=>fameCounts[f]||0),
+    backgroundColor:fameColors,borderColor:'#fff',borderWidth:3}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{boxWidth:10,font:{size:11},color:'#475569'}}}}});
+
+new Chart(document.getElementById('chartFAMECost'),{type:'bar',
+  data:{labels:fameOrder,datasets:[{data:fameOrder.map(f=>(fameCosts[f]||0)/1e6),
+    backgroundColor:fameColors,borderRadius:4}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false},ticks:{color:'#94a3b8',font:{size:10}}},y:{grid:{color:'rgba(226,232,240,0.8)'},ticks:{color:'#94a3b8',callback:v=>'₱'+v.toFixed(0)+'M'}}}}});
+
+function sectorByProv(sector) {
+  const d = {};
+  PROJECTS.filter(p=>p.fame.includes(sector)&&!p.prov.includes(',')).forEach(p=>{
+    const pv=p.prov.replace('del Norte','del N.').replace('del Sur','del S.');
+    d[pv]=(d[pv]||0)+1;
+  });
+  return d;
+}
+function miniBar(id, data) {
+  new Chart(document.getElementById(id),{type:'bar',
+    data:{labels:Object.keys(data),datasets:[{data:Object.values(data),backgroundColor:'rgba(255,255,255,0.4)',borderRadius:3}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{grid:{display:false},ticks:{color:'rgba(255,255,255,0.6)',font:{size:9}}},
+              y:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'rgba(255,255,255,0.6)',font:{size:9}}}}}});
+}
+miniBar('chartFishProv', sectorByProv('Fishery'));
+miniBar('chartAgroProv', sectorByProv('Agroforestry'));
+miniBar('chartMineProv', sectorByProv('Mining'));
+</script>
+</body>
+</html>
