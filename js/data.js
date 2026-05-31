@@ -390,3 +390,18 @@ function buildFooter() {
   </div>
 </footer>`;
 }
+
+
+// Load the Helix chatbot on every page that includes this shared script.
+(function injectHelixWidget() {
+  const src = 'https://helix.dostcaraga.ph/api/public/widget.js?v=20260513-session-cache';
+  if (document.querySelector(`script[src="${src}"]`)) return;
+
+  const script = document.createElement('script');
+  script.src = src;
+  script.defer = true;
+  script.setAttribute('data-public-key', 'pbk_OXrOTidZjaSY6oxhMp4YK7QZpyvDAAwkCdy9xB4rHGiKCrEZ');
+  script.setAttribute('data-origin', 'https://helix.dostcaraga.ph');
+  script.setAttribute('data-cache-minutes', '10');
+  document.head.appendChild(script);
+})();
