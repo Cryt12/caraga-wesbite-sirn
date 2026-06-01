@@ -345,13 +345,13 @@ function buildNav(activePage) {
     <a href="index.html" class="nav-brand">
       <div class="nav-brand-mark">DC</div>
       <div>
-        <div class="nav-brand-text">DOST Caraga Region XIII</div>
+        <div class="nav-brand-text">DOST Caraga (Region XII)</div>
         <div class="nav-brand-sub">Performance Review · FY 2024–2025</div>
       </div>
     </a>
     <ul class="nav-links">
       <li><a href="index.html" ${activePage==='home'?'class="active"':''}>Home</a></li>
-      <li><a href="region-profile.html" ${activePage==='profile'?'class="active"':''}>Region Profile</a></li>
+      <li><a href="region-profile.html" ${activePage==='profile'?'class="active"':''}>Regional Profile</a></li>
       <li><a href="economic-profile.html" ${activePage==='economy'?'class="active"':''}>Economic Profile</a></li>
       <li><a href="sti-portfolio.html" ${activePage==='portfolio'?'class="active"':''}>STI Portfolio</a></li>
       <li class="nav-dropdown">
@@ -382,7 +382,7 @@ function buildFooter() {
     </div>
     <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="region-profile.html">Region Profile</a></li>
+      <li><a href="region-profile.html">Regional Profile</a></li>
       <li><a href="economic-profile.html">Economy</a></li>
       <li><a href="sti-portfolio.html">STI Portfolio</a></li>
       <li><a href="data-explorer.html">Data Explorer</a></li>
