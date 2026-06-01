@@ -20,6 +20,25 @@
 .pp-item span:last-child { color:var(--text); font-weight:600; margin-left:4px; }
 .lang-bar { height:28px; background:var(--border); border-radius:4px; overflow:hidden; display:flex; margin-bottom:8px; }
 .lang-seg { height:100%; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:700; color:#fff; transition:width 0.5s; white-space:nowrap; overflow:hidden; padding:0 4px; }
+
+.institutional-box {
+  padding-bottom: 28px;
+}
+
+.institutional-list {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.institutional-list li {
+  min-height: 0;
+}
+
+@media (max-width: 700px) {
+  .institutional-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -182,9 +201,9 @@
       </div>
     </div>
 
-    <div class="findings-box">
+    <div class="findings-box institutional-box">
       <h3>Institutional Development Context</h3>
-      <ul class="findings-list">
+      <ul class="findings-list institutional-list">
         <li>The <strong>i2FAME framework</strong> (Innovation-integrated Fishery, Agroforestry, Mining, and Ecotourism) serves as Caraga's regional development model, linking STI investments to the region's natural resource endowments and comparative advantages.</li>
         <li>The <strong>peace dividend</strong> following the reduction of New People's Army (NPA) activity has been identified by RDC officials as a significant contributor to the region's poverty reduction and improved investment environment.</li>
         <li>DOST Caraga's innovation hubs — the iHUBs in all five provinces and iMAKE makerspaces in schools and public facilities — form a distributed innovation infrastructure serving entrepreneurs, students, and local government units.</li>

@@ -4,6 +4,24 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>3-Horizon Framework — DOST Caraga Performance Review</title><link rel="icon" href="images/DOST Logo.png" type="image/png"><link rel="stylesheet" href="css/style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+<style>
+.horizon-box {
+  margin-top: 6px;
+}
+
+.horizon-list {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.horizon-list li {
+  min-height: 0;
+  line-height: 1.65;
+}
+
+@media(max-width:700px){ .horizon-list { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -121,9 +139,9 @@
         <div class="panel-body"><div class="chart-wrap"><canvas id="chartH3"></canvas></div></div>
       </div>
       <div>
-        <div class="findings-box">
+        <div class="findings-box horizon-box">
           <h3>Horizon Balance Assessment</h3>
-          <ul class="findings-list">
+          <ul class="findings-list horizon-list">
             <li><strong>Horizon 1 (60 projects)</strong> is appropriately dominant, reflecting Caraga's primary development priority of MSME modernization and inclusive productivity growth in a region still transitioning from high poverty.</li>
             <li><strong>Horizon 2 (38 projects)</strong> demonstrates meaningful investment in commercialization infrastructure, though the gap in H2-KR3 (KIST Parks) warrants attention in the FY 2026 planning cycle.</li>
             <li><strong>Horizon 3 (35 projects)</strong> represents a bold and forward-looking portfolio component that positions Caraga as a future-industry-capable region, with the SSCP and NOVA Hub serving as leading indicators.</li>

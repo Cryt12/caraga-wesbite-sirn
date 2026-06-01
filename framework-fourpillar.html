@@ -15,7 +15,23 @@
 .oh-code { font-size:11px; opacity:0.65; font-family:var(--font-mono); margin-bottom:12px; }
 .oh-stat { font-family:var(--font-display); font-size:32px; font-weight:800; }
 .oh-sublabel { font-size:11px; opacity:0.65; }
+
+.policy-box {
+  margin-top: 6px;
+}
+
+.policy-list {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.policy-list li {
+  min-height: 0;
+  line-height: 1.65;
+}
+
 @media(max-width:600px){ .outcome-hero { grid-template-columns:1fr; } }
+@media(max-width:700px){ .policy-list { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -109,9 +125,9 @@
       </div>
     </div>
 
-    <div class="findings-box">
+    <div class="findings-box policy-box">
       <h3>Key Policy Observations on Outcome Alignment</h3>
-      <ul class="findings-list">
+      <ul class="findings-list policy-list">
         <li>The overwhelming concentration in <strong>O2-WCF (81% of projects)</strong> reflects an appropriate near-to-medium-term prioritization of economic productivity, consistent with the region's growth imperative and Horizon 1 targets. However, a sustained review of the balance across all four pillars is recommended for future planning cycles.</li>
         <li>The relative underrepresentation of <strong>O3-WPR</strong> (8 projects, or 6.5% of portfolio) is a strategic gap that requires attention in the context of Caraga's climate vulnerability — particularly for Dinagat Islands and coastal communities that suffered significant losses from typhoons during the review period.</li>
         <li>The growing presence of <strong>O4-SI</strong> (23% of portfolio) reflects a healthy trajectory toward embedding sustainability considerations into program design, consistent with SDG 13 (Climate Action) and national resilience frameworks.</li>
