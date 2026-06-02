@@ -383,9 +383,10 @@ function buildFooter() {
     <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="region-profile.html">Regional Profile</a></li>
-      <li><a href="economic-profile.html">Economy</a></li>
+      <li><a href="economic-profile.html">Economic Profile</a></li>
       <li><a href="sti-portfolio.html">STI Portfolio</a></li>
       <li><a href="data-explorer.html">Data Explorer</a></li>
+      <li><a href="provinces.html">Provinces</a></li>
     </ul>
   </div>
 </footer>`;
