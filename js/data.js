@@ -234,8 +234,7 @@ const PROJECTS = [
   {id:"P-119",name:"TechConnect: Facilitating Technology Transfer and Upgrading — FOB and SETUP (2025)",prog:"LGIA",year:"2025",prov:"Regionwide",city:"",cost:1115000,outcomes:["O2-WCF"],kr:["H2-KR1","H2-KR2","H2-KR5"],fame:["Cross-Cutting"],pbbm:["PBBM-03","PBBM-05"],sdg:["SDG-09"],strategies:["S-06"]},
   {id:"P-120",name:"Igniting Innovation for Dynamic Market Expansion through RDC-RRDIC (2025)",prog:"LGIA",year:"2025",prov:"Regionwide",city:"",cost:2625974,outcomes:["O2-WCF"],kr:["H2-KR5"],fame:["Cross-Cutting"],pbbm:["PBBM-05"],sdg:["SDG-08","SDG-09","SDG-16","SDG-17"],strategies:["S-05","S-20"]},
   {id:"P-121",name:"Driving Socioeconomic Transformation through Operationalization of the i2FAME Center (2025)",prog:"LGIA",year:"2025",prov:"Regionwide",city:"",cost:1182190,outcomes:["O2-WCF"],kr:["H2-KR5"],fame:["Cross-Cutting"],pbbm:["PBBM-05"],sdg:["SDG-08","SDG-09"],strategies:["S-05","S-20"]},
-  {id:"P-122",name:"MinERAL Hub: Mineral Processing Innovation Hub, Expertise and Skills Training Center",prog:"LGIA",year:"2025",prov:"Agusan del Norte",city:"Cabadbaran City",cost:310849,outcomes:["O2-WCF"],kr:["H3-KR1","H3-KR2","H3-KR3"],fame:["Mining"],pbbm:["PBBM-03","PBBM-05"],sdg:["SDG-04","SDG-08","SDG-09"],strategies:["S-06","S-07"]},
-  {id:"P-123",name:"Establishment of the Caraga Network of Open Virtual AI (NOVA) Hub for Startup Ventures",prog:"LGIA",year:"2025",prov:"Regionwide",city:"",cost:1500000,outcomes:["O2-WCF"],kr:["H3-KR1","H3-KR2","H3-KR3"],fame:["Cross-Cutting"],pbbm:["PBBM-05"],sdg:["SDG-08","SDG-09","SDG-17"],strategies:["S-06","S-19"]}
+  {id:"P-122",name:"MinERAL Hub: Mineral Processing Innovation Hub, Expertise and Skills Training Center",prog:"LGIA",year:"2025",prov:"Agusan del Norte",city:"Cabadbaran City",cost:310849,outcomes:["O2-WCF"],kr:["H3-KR1","H3-KR2","H3-KR3"],fame:["Mining"],pbbm:["PBBM-03","PBBM-05"],sdg:["SDG-04","SDG-08","SDG-09"],strategies:["S-06","S-07"]}
 ];
 
 // ── RDI CENTERS ──
